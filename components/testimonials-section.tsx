@@ -115,7 +115,7 @@ export default function TestimonialsSection() {
               <div className="order-1 lg:order-2 space-y-6">
                 <div className="relative">
                   {/* Large Quote Mark */}
-                  <div className="absolute -top-4 -left-4 text-6xl text-gray-200 font-serif leading-none">"</div>
+                  <div className="absolute -top-4 -left-4 text-6xl text-gray-200 font-serif leading-none">&quot;</div>
 
                   <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed pl-8">
                     {current.quote}
