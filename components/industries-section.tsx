@@ -101,8 +101,8 @@ export default function IndustriesSection() {
             Industries We Served
           </h2>
           <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto " style={{fontFamily:"sans-serif"}}>
-          With deep-rooted expertise across diverse sectors, we provide tailored recruitment solutions that align with your industry's demands.
-           Our understanding of each industry's unique challenges helps us connect the right talent with the right opportunities
+          With deep-rooted expertise across diverse sectors, we provide tailored recruitment solutions that align with your industry&apos;s demands.
+           Our understanding of each industry&apos;s unique challenges helps us connect the right talent with the right opportunities
           </p>
         </div>
 
