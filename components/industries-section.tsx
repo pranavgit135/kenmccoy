@@ -75,18 +75,18 @@ export default function IndustriesSection() {
   const [activeTab, setActiveTab] = useState("CHEMICALS")
   const currentData = industriesData[activeTab as keyof typeof industriesData]
 
-  const allIndustries = [
-    "Chemicals and speciality chemicals",
-    "Petrochemicals and OIL & Gas",
-    "Fast Moving Consumer Goods (FMCG)",
-    "Pharmaceuticals and BioTech",
-    "Consumer Durable and Industrial Electronics",
-    "Heavy and Light Engineering",
-    "Automobiles and Auto Ancillary",
-    "Real Estate and Infrastructure",
-    "Banking and NBFC",
-    "Retail, Logistics, Supply Chain and Warehousing",
-  ]
+  // const allIndustries = [
+  //   "Chemicals and speciality chemicals",
+  //   "Petrochemicals and OIL & Gas",
+  //   "Fast Moving Consumer Goods (FMCG)",
+  //   "Pharmaceuticals and BioTech",
+  //   "Consumer Durable and Industrial Electronics",
+  //   "Heavy and Light Engineering",
+  //   "Automobiles and Auto Ancillary",
+  //   "Real Estate and Infrastructure",
+  //   "Banking and NBFC",
+  //   "Retail, Logistics, Supply Chain and Warehousing",
+  // ]
 
   return (
     <section className="bg-[#005ca1] text-white py-16 lg:py-20">
