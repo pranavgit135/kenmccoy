@@ -27,6 +27,27 @@ export default function VideoSection() {
     setShowThumbnail(true)
   }
 
+  const partners =[{
+    name:"Bayer",
+    logo:"/logo_Bayer.png"
+  },
+{
+  name:"Birla Carbon",
+  logo:"/logo_Birla_Carbon.jpg"
+},
+{
+  name:"Ebco",
+  logo:"/logo_Ebco.jpg"
+},
+{
+  name:"Reliance",
+  logo:"/logo_reliance.png"
+},
+{
+  name:"Spica",
+  logo:"/logo_Spica.jpg"
+}]
+
   return (
     <section className="bg-gray-50 py-16 lg:py-24">
       <div className="container mx-auto px-4 md:px-6">
@@ -40,9 +61,10 @@ export default function VideoSection() {
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Take a closer look at who we are, what we stand for, and how we connect talent with opportunity. Our journey, culture, and impact — all captured in one video.
             </p>
+            <a href="/Contact">
             <Button  className="bg-[#005ca1] hover:bg-[#08426d] text-white px-8 py-3 rounded-full">
               Schedule Consultation →
-            </Button>
+            </Button></a>
           </div>
 
           {/* Video Container */}
@@ -116,13 +138,18 @@ export default function VideoSection() {
           {/* Partner Logos */}
           <div className="border-t border-gray-200 pt-8">
             <p className="text-sm text-gray-500 mb-6">Trusted by leading companies</p>
-            <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
+            <div className="flex flex-wrap items-center justify-center gap-8  ">
+            {partners.map((partner:any, index:number)=>(
+                 <div key={index} className="h-16 w-24 opacity-60 hover:opacity-100 rounded">
+                  <img className="w-full h-full " src={partner.logo} alt={partner.name} />
+                 </div>
+              ))}
               {/* Logo placeholders - replace with actual logos */}
-              <div className="h-8 w-20 bg-gray-300 rounded"></div>
+              {/* <div className="h-8 w-20 bg-gray-300 rounded"></div>
               <div className="h-8 w-24 bg-gray-300 rounded"></div>
               <div className="h-8 w-16 bg-gray-300 rounded"></div>
               <div className="h-8 w-28 bg-gray-300 rounded"></div>
-              <div className="h-8 w-12 bg-gray-300 rounded"></div>
+              <div className="h-8 w-12 bg-gray-300 rounded"></div> */}
             </div>
           </div>
         </div>

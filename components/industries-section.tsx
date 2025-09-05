@@ -8,7 +8,7 @@ const industriesData = {
     title: "Chemicals & Specialty Chemicals",
     description:
       "Driving innovation in manufacturing processes with cutting-edge technology and sustainable practices.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/Chem_plant_image.png?height=600&width=800",
     industries: [
       "Talent acquisition for R&D and formulation experts",
       "Support for regulatory and compliance hiring",
@@ -21,7 +21,7 @@ const industriesData = {
   PETROCHEMICALS: {
     title: "Petrochemicals, Oil & Gas",
     description: "Empowering digital transformation with advanced technology solutions and innovative platforms.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/Petrochem_plant_image.png?height=600&width=800",
     industries: [
       "Upstream, midstream, and downstream talent coverage",
       "Experienced field engineers and geologists",
@@ -34,7 +34,7 @@ const industriesData = {
   FMCG: {
     title: "Fast Moving Consumer Goods (FMCG)",
     description: "Advancing healthcare through biotechnology, pharmaceuticals, and medical device innovation.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/FMCG_store_image.png?height=600&width=800",
     industries: ["Sales and marketing talent across regions",
        "Hiring for supply chain and distribution roles",
         "Product innovation and R&D staffing",
@@ -46,7 +46,7 @@ const industriesData = {
   PHARMACEUTICALS: {
     title: "Pharmaceuticals & Biotech",
     description: "Providing comprehensive financial solutions and banking services for sustainable growth.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/Pharma_image.png?height=600&width=800",
     industries: [
       "Research scientists and clinical trial specialists", 
       "Regulatory affairs and documentation experts", 
@@ -59,7 +59,7 @@ const industriesData = {
   CONSUMER: {
     title: "Consumer Durables & Industrial Electronics",
     description: "Leading the energy transition with sustainable solutions and innovative technologies.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/Consumer.jpg?height=600&width=800",
     industries: [
       "Sourcing and procurement experts", 
       "Product development and innovation talent", 
@@ -151,7 +151,7 @@ export default function IndustriesSection() {
 
             <div>
               <button className="group inline-flex font-serif items-center space-x-2 border border-white/30 hover:border-[#e67016] hover:text-[#e67016] rounded-full px-6 py-3 transition-all duration-300">
-                <span>Learn more</span>
+                <a href="/Services">Learn more</a>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
@@ -159,7 +159,7 @@ export default function IndustriesSection() {
 
           {/* Right Content - Image */}
           <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] overflow-hidden rounded-lg order-1 lg:order-2">
-            <div className="absolute inset-0 bg-gradient-to-r from-[#1a2530]/60 to-transparent z-10"></div>
+            <div className="absolute inset-0  z-10"></div>
             <div
               className="absolute inset-0 bg-cover bg-center transition-all duration-500"
               style={{

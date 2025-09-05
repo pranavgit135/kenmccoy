@@ -4,6 +4,7 @@ import type React from "react"
 import Header from "@/components/header"
 import { useState } from "react"
 import { MapPin, Phone, Mail, Clock, Send, Globe, ChevronLeft, ChevronRight } from "lucide-react"
+import Footer from "@/components/footer"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -102,7 +103,7 @@ export default function ContactPage() {
                     <br />
                     Andheri East, Mumbai
                     <br />
-                    Maharashtra 400059, India
+                    Maharashtra 400099, India
                   </address>
                 </div>
               </div>
@@ -114,7 +115,7 @@ export default function ContactPage() {
                     <Phone className="text-accent" size={20} />
                   </div>
                   <h4 className="font-semibold text-primary mb-2">Phone</h4>
-                  <p className="text-muted-foreground">+91 22 1234 5678</p>
+                  <p className="text-muted-foreground">+91-22-42959123</p>
                 </div>
 
                 <div className="bg-white rounded-2xl p-6 shadow-lg border border-border/50 hover:shadow-xl transition-all duration-300">
@@ -122,7 +123,7 @@ export default function ContactPage() {
                     <Mail className="text-accent" size={20} />
                   </div>
                   <h4 className="font-semibold text-primary mb-2">Email</h4>
-                  <p className="text-muted-foreground">contact@kenmccoy.com</p>
+                  <p className="text-muted-foreground">info@kenmccoy.in</p>
                 </div>
               </div>
 
@@ -366,6 +367,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   )
 }

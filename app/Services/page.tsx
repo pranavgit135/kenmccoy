@@ -3,6 +3,8 @@
 import { useState } from "react"
 import { Search, TrendingUp, Building, ChevronRight, Star, Award, Target } from "lucide-react"
 import Header from "@/components/header"
+import Footer from "@/components/footer"
+
 export default function ServicesPage() {
   const [activeService, setActiveService] = useState(0)
 
@@ -184,12 +186,13 @@ export default function ServicesPage() {
             <button className="bg-white text-primary px-8 py-4 rounded-full font-medium hover:bg-white/90 transition-colors duration-300">
               Schedule Consultation
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-full font-medium hover:bg-white hover:text-primary transition-colors duration-300">
+            <button className="border-2 border-white text-white px-8 py-4 rounded-full font-medium  hover:text-black  duration-300">
               Download Brochure
             </button>
           </div>
         </div>
       </section>
+      <Footer />
     </div>
     </>
   )

@@ -171,10 +171,11 @@ export default function AboutSection() {
 
           {/* CTA Section */}
           <div className="text-center mt-16">
+            <a href="/Services">
             <Button size="lg" className="bg-[#005ca1] hover:bg-[#08426d] text-white px-8 py-4 rounded-full text-lg">
               Start Your Journey
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
+            </Button></a>
           </div>
         </div>
       </div>

@@ -21,6 +21,8 @@ import {
 } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
 
+import Footer from "@/components/footer"
+
 function CounterAnimation({
   end,
   duration = 2000,
@@ -175,9 +177,11 @@ export default function AboutPage() {
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-lg">
               Discover Our Approach
             </Button>
+           
             <Button size="lg" variant="outline" className="px-8 py-3 text-lg border-2 bg-transparent">
               Watch Our Story
             </Button>
+           
           </div>
         </div>
       </section>
@@ -745,6 +749,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   )
 }

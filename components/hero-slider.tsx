@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation"
 
 const slides = [
   {
@@ -11,8 +12,8 @@ const slides = [
     title: "Tailored Talent for Every Industry",
     description: "From Chemicals to Real Estate, our industry-specific expertise ensures you get talent that truly fits your business needs.",
     buttons: [
-      { text: "about us", href: "/about" },
-      { text: "our history", href: "/history" },
+      { text: "about us", href: "/About" },
+      { text: "our history", href: "/About" },
     ],
   },
   {
@@ -21,8 +22,8 @@ const slides = [
     title: "Leadership That Drives Impact",
     description: "We identify high-potential professionals who don’t just fill roles — they lead, innovate, and transform organizations.",
     buttons: [
-      { text: "our services", href: "/services" },
-      { text: "learn more", href: "/learn" },
+      { text: "our services", href: "/Services" },
+      { text: "learn more", href: "/About" },
     ],
   },
   {
@@ -31,13 +32,14 @@ const slides = [
     title: "Build Your Future with Us",
     description: "Whether you're scaling your team or seeking your next role, we help shape careers and strengthen companies worldwide.",
     buttons: [
-      { text: "get started", href: "/start" },
-      { text: "contact us", href: "/contact" },
+      { text: "get started", href: "/#" },
+      { text: "contact us", href: "/Contact" },
     ],
   },
 ]
 
 export default function HeroSlider() {
+  const router = useRouter()
   const [currentSlide, setCurrentSlide] = useState(0)
 
   useEffect(() => {
@@ -109,7 +111,8 @@ export default function HeroSlider() {
                   key={index}
                   variant="outline"
                   size="lg"
-                  className="group bg-transparent border-2 border-white/50 text-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-3 rounded-full"
+                  onClick={() => router.push(button.href)}
+                  className="group bg-transparent border-2 border-white/50 hover:text-black hover:bg-white transition-all duration-300 px-8 py-3 rounded-full"
                 >
                   <span className="mr-2">{button.text}</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
