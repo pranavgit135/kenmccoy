@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Header from "@/components/header"
@@ -19,7 +20,6 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react"
-import { useState, useEffect, useRef } from "react"
 
 import Footer from "@/components/footer"
 
@@ -93,6 +93,11 @@ function CounterAnimation({
 export default function AboutPage() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [timelineSlide, setTimelineSlide] = useState(0)
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false)
+
+  const handleVideoPlay = () => {
+    setIsVideoPlaying(true)
+  }
 
   const differentiators = [
     {
@@ -187,30 +192,56 @@ export default function AboutPage() {
       </section>
 
       {/* Video Section */}
-      <section className="py-20 px-4 bg-muted/20">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted/20">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Experience Our Expertise</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
+              Experience Our Expertise
+            </h2>
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl sm:max-w-3xl mx-auto px-4">
               Discover how our scientific approach to leadership recruitment transforms organizations
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-10 lg:mb-12">
             {/* Main Featured Video */}
             <div className="lg:col-span-2">
               <Card className="overflow-hidden border-0 shadow-2xl bg-gradient-to-br from-primary/5 to-accent/5">
-                <div className="relative aspect-video bg-muted/50 flex items-center justify-center group cursor-pointer">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                  <div className="relative z-10 flex flex-col items-center text-center">
-                    <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                      <Play className="w-8 h-8 text-accent-foreground ml-1" />
+                <div className="relative aspect-[10/10] sm:aspect-[16/9] lg:aspect-[18/9] min-h-[300px] sm:min-h-[400px] lg:min-h-[600px] bg-muted/50">
+                  {!isVideoPlaying ? (
+                    <div 
+                      className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent flex items-center justify-center group cursor-pointer"
+                      onClick={handleVideoPlay}
+                    >
+                      {/* Thumbnail Image */}
+                      <img 
+                        src="/placeholder.jpg" 
+                        alt="Video thumbnail" 
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                      <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 lg:px-8">
+                        <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-accent rounded-full flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                          <Play className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-accent-foreground ml-1" />
+                        </div>
+                        <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-primary mb-2 sm:mb-3">
+                          Our Leadership Philosophy
+                        </h3>
+                        <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-xs sm:max-w-sm lg:max-w-md">
+                          Learn about our comprehensive approach to identifying and placing exceptional leaders
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-primary mb-2">Our Leadership Philosophy</h3>
-                    <p className="text-muted-foreground max-w-md">
-                      Learn about our comprehensive approach to identifying and placing exceptional leaders
-                    </p>
-                  </div>
+                  ) : (
+                    <video 
+                      className="w-full h-full object-contain sm:object-cover"
+                      controls
+                      autoPlay
+                      src="https://kenmccoy.in/wp-content/uploads/2021/09/ken_mccoy_11.mp4"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  )}
                 </div>
               </Card>
             </div>
@@ -524,9 +555,9 @@ export default function AboutPage() {
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Globe className="w-4 h-4" />
-              Global Excellence
+              Our Excellence
             </div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Our Global Impact</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Our Reach & Impact</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Serving diverse industries with specialized expertise across key markets worldwide
             </p>
@@ -682,12 +713,12 @@ export default function AboutPage() {
                     <Globe className="w-8 h-8 text-accent" />
                   </div>
                   <div className="text-right">
-                    <div className="text-2xl font-bold text-accent">Global</div>
+                    <div className="text-2xl font-bold text-accent">Presence</div>
                     <div className="text-xs text-muted-foreground">Reach</div>
                   </div>
                 </div>
                 <CardTitle className="text-2xl font-bold text-primary mb-3 group-hover:text-accent transition-colors duration-300">
-                  Global Presence
+                  Our Presence
                 </CardTitle>
                 <p className="text-muted-foreground leading-relaxed">
                   Strategically positioned to serve clients across key business hubs and emerging markets.
@@ -712,11 +743,11 @@ export default function AboutPage() {
                     <span className="font-medium">Pune & Hyderabad</span>
                     <div className="ml-auto text-xs text-muted-foreground">Growth Markets</div>
                   </div>
-                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl hover:from-accent/10 hover:to-accent/5 transition-all duration-300 cursor-pointer">
+                  {/* <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl hover:from-accent/10 hover:to-accent/5 transition-all duration-300 cursor-pointer">
                     <div className="w-3 h-3 bg-gradient-to-r from-accent to-primary rounded-full"></div>
                     <span className="font-medium">International Network</span>
                     <div className="ml-auto text-xs text-muted-foreground">Global Reach</div>
-                  </div>
+                  </div> */}
                 </div>
               </CardContent>
             </Card>
