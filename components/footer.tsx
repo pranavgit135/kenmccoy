@@ -72,7 +72,7 @@ export default function Footer() {
                 Services
               </Link>
               <Link
-                href="/contact"
+                href="/Contact"
                 className="text-gray-300 hover:text-white transition-colors duration-200 group flex items-center gap-2"
               >
                 <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
