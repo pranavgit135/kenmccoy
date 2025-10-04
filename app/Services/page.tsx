@@ -79,19 +79,19 @@ export default function ServicesPage() {
 
   return (<>
     <Header/>
-    <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background mt-4">
+    <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background md:mt-4">
         
       {/* Hero Section */}
-      <section className="py-36 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5" />
+      <section className="md:py-36 py-10 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#3b82f6]/5 to-accent/5" />
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 bg-[#3b82f6]/10 text-[#3b82f6] px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Star className="w-4 h-4" />
               Professional Services
             </div>
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-6">Our Services</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <h1 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-6">Our Services</h1>
+            <p className="md:text-xl text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Comprehensive leadership solutions designed to transform organizations and accelerate career excellence
               through our proven methodologies.
             </p>
@@ -109,7 +109,7 @@ export default function ServicesPage() {
                 onClick={() => setActiveService(index)}
                 className={`flex items-center gap-3 px-6 py-3 rounded-full transition-all duration-300 ${
                   activeService === index
-                    ? "bg-primary text-primary-foreground shadow-lg scale-105"
+                    ? "bg-[#3b82f6] text-white shadow-lg scale-105"
                     : "bg-white text-foreground hover:bg-muted border border-border"
                 }`}
               >
@@ -126,8 +126,8 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="p-3 bg-primary/10 rounded-full text-primary">{services[activeService].icon}</div>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary">
+              <div className="p-3 bg-[#3b82f6]/10 rounded-full text-[#3b82f6]">{services[activeService].icon}</div>
+              <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl font-bold text-[#3b82f6]">
                 {services[activeService].title}
               </h2>
             </div>
@@ -183,14 +183,18 @@ export default function ServicesPage() {
             teams.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-primary px-8 py-4 rounded-full font-medium hover:bg-white/90 transition-colors duration-300">
+            <a href="/Contact" className="bg-white text-primary px-8 py-4 rounded-full font-medium hover:bg-white/90 transition-colors duration-300">
               Schedule Consultation
-            </button>
+            </a>
             <button className="border-2 border-white text-white px-8 py-4 rounded-full font-medium  hover:text-black  duration-300">
               Download Brochure
             </button>
           </div>
         </div>
+      </section>
+
+      <section className="  text-white">
+        <img src="/experience.png" alt="" />
       </section>
       <Footer />
     </div>

@@ -170,11 +170,11 @@ export default function AboutPage() {
             <Star className="w-4 h-4" />
             Leadership Excellence Since Inception
           </div>
-          <h1 className="font-serif text-6xl md:text-7xl font-bold text-primary mb-6 tracking-tight">Ken McCoy</h1>
-          <p className="text-2xl md:text-3xl text-muted-foreground mb-6 max-w-4xl mx-auto font-light">
+          <h1 className="font-serif text-4xl md:text-6xl xl:text-7xl font-bold text-primary mb-6 tracking-tight">Ken McCoy</h1>
+          <p className="text-xl md:text-3xl text-muted-foreground mb-6 max-w-4xl mx-auto font-light">
             Leadership Advisory Organization
           </p>
-          <p className="text-lg text-foreground/80 mb-10 max-w-5xl mx-auto leading-relaxed">
+          <p className="md:text-lg text-md text-foreground/80 mb-10 max-w-5xl mx-auto leading-relaxed">
             Established by experienced professionals from almost all fields of modern industry, we deliver a thoughtful
             approach for selecting the best fit through scientific, psychological, skill and competency-based methods.
           </p>
@@ -283,7 +283,7 @@ export default function AboutPage() {
                 <TrendingUp className="w-4 h-4" />
                 Our Journey
               </div>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-8 leading-tight">
+              <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-8 leading-tight">
                 Redefining Leadership Recruitment
               </h2>
               <div className="space-y-6">
@@ -331,22 +331,33 @@ export default function AboutPage() {
       </section>
 
       {/* Company Timeline Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-muted/30 to-muted/10 relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-muted/30 to-muted/10 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
         <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <div className="inline-flex items-center gap-2 bg-[#3b82f6]/10 text-[#3b82f6] px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Star className="w-4 h-4" />
               Company Timeline
             </div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">Our 8-Year Journey</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">Our 25-Year Journey</h2>
+            <p className="md:text-xl text-lg text-muted-foreground max-w-3xl mx-auto">
               Key milestones that shaped our growth and leadership excellence
             </p>
           </div>
 
+          <div className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative h-[300px] sm:h-[400px] lg:h-[600px] w-full overflow-hidden rounded-xl shadow-2xl bg-muted/20">
+              <img 
+                src="/timeline.jpg" 
+                alt="timeline" 
+                className="w-full h-full object-contain object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+            </div>
+          </div>
+
           {/* Timeline Carousel */}
-          <div className="relative">
+          {/* <div className="relative">
             <div className="flex items-center justify-between mb-6">
               <div className="text-sm text-muted-foreground">8 Milestones</div>
               <div className="flex items-center gap-2">
@@ -396,10 +407,10 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Timeline Indicators */}
-            <div className="flex items-center justify-center gap-2 mt-8">
+            {/* <div className="flex items-center justify-center gap-2 mt-8">
               {[0, 1].map((idx) => (
                 <button
                   key={idx}
@@ -410,16 +421,16 @@ export default function AboutPage() {
                   aria-label={`Go to timeline slide ${idx + 1}`}
                 />
               ))}
-            </div>
+            </div> */}
 
-            {/* Progress */}
-            <div className="mt-6 bg-muted/30 rounded-full h-1 overflow-hidden">
+             {/* Progress */}
+            {/* <div className="mt-6 bg-muted/30 rounded-full h-1 overflow-hidden">
               <div
                 className="h-full bg-gradient-to-r from-primary to-accent transition-all duration-700 ease-out"
                 style={{ width: `${((timelineSlide + 1) / 2) * 100}%` }}
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -430,13 +441,13 @@ export default function AboutPage() {
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
 
         <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-16">
+          <div className="text-center md:mb-16">
             <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Star className="w-4 h-4" />
               Our Methodology
             </div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">What Sets Us Apart</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">What Sets Us Apart</h2>
+            <p className="md:text-xl  text-lg text-muted-foreground max-w-3xl mx-auto">
               Our scientific approach combines cutting-edge assessment techniques with deep industry expertise
             </p>
           </div>
@@ -457,23 +468,23 @@ export default function AboutPage() {
                         <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-accent/5 to-transparent rounded-full -translate-y-32 translate-x-32" />
                         <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-primary/5 to-transparent rounded-full translate-y-24 -translate-x-24" />
 
-                        <CardHeader className="pb-8 pt-12 relative z-10">
+                        <CardHeader className="md:pb-8 md:pt-12 relative z-10">
                           <div className="flex flex-col items-center text-center">
-                            <div className="w-24 h-24 bg-gradient-to-br from-accent to-accent/80 rounded-3xl flex items-center justify-center mb-8 shadow-2xl transform hover:scale-110 transition-transform duration-300">
-                              <IconComponent className="w-12 h-12 text-blue-500 text-accent-foreground" />
+                            <div className="md:w-24 md:h-24 h-16 w-16 bg-gradient-to-br from-accent to-accent/80 rounded-3xl flex items-center justify-center mb-8 shadow-2xl transform hover:scale-110 transition-transform duration-300">
+                              <IconComponent className="md:w-12 md:h-12 w-8 h-8 text-blue-500 " />
                             </div>
-                            <CardTitle className="text-3xl md:text-4xl font-bold font-serif text-primary mb-6">
+                            <CardTitle className="text-2xl md:text-4xl font-bold font-serif text-primary md:mb-6">
                               {item.title}
                             </CardTitle>
                           </div>
                         </CardHeader>
 
-                        <CardContent className="px-12 pb-12 relative z-10">
-                          <p className="text-lg text-muted-foreground leading-relaxed text-center mb-8 max-w-2xl mx-auto">
+                        <CardContent className="px-12 md:pb-12 pb-4 relative z-10">
+                          <p className="md:text-lg text-md text-muted-foreground leading-relaxed text-center md:mb-8 max-w-4xl mx-auto">
                             {item.description}
                           </p>
 
-                          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-3xl mx-auto">
+                          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
                             {item.features.map((feature, featureIndex) => (
                               <div
                                 key={featureIndex}
@@ -551,14 +562,14 @@ export default function AboutPage() {
         <div className="absolute top-10 left-1/4 w-64 h-64 bg-gradient-to-br from-accent/5 to-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-gradient-to-tl from-primary/5 to-accent/5 rounded-full blur-3xl" />
 
-        <div className="max-w-7xl mx-auto relative">
+        <div className="max-w-7xl mx-auto relative p-4">
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Globe className="w-4 h-4" />
               Our Excellence
             </div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Our Reach & Impact</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">Our Reach & Impact</h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Serving diverse industries with specialized expertise across key markets worldwide
             </p>
           </div>
@@ -657,10 +668,10 @@ export default function AboutPage() {
               <CardHeader className="pb-6 pt-8 relative z-10">
                 <div className="flex items-center justify-between mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                    <Award className="w-8 h-8 text-primary" />
+                    <Award className="w-8 h-8 text-[#3b82f6]" />
                   </div>
                   <div className="text-right">
-                    <div className="text-2xl font-bold text-primary">C-Level</div>
+                    <div className="text-2xl font-bold text-[#3b82f6]">C-Level</div>
                     <div className="text-xs text-muted-foreground">Focus</div>
                   </div>
                 </div>
@@ -675,28 +686,28 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl hover:from-primary/10 hover:to-primary/5 transition-all duration-300 cursor-pointer">
                     <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 bg-primary rounded-full"></div>
+                      <div className="w-3 h-3 bg-[#3b82f6] rounded-full"></div>
                       <span className="font-medium">C-Suite Executives</span>
                     </div>
                     <span className="text-sm text-muted-foreground">CEO, CTO, CFO</span>
                   </div>
                   <div className="flex items-center justify-between p-4 bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl hover:from-primary/10 hover:to-primary/5 transition-all duration-300 cursor-pointer">
                     <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 bg-primary rounded-full"></div>
+                      <div className="w-3 h-3 bg-[#3b82f6] rounded-full"></div>
                       <span className="font-medium">Vice Presidents</span>
                     </div>
                     <span className="text-sm text-muted-foreground">VP Level</span>
                   </div>
                   <div className="flex items-center justify-between p-4 bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl hover:from-primary/10 hover:to-primary/5 transition-all duration-300 cursor-pointer">
                     <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 bg-primary rounded-full"></div>
+                      <div className="w-3 h-3 bg-[#3b82f6] rounded-full"></div>
                       <span className="font-medium">Directors & GMs</span>
                     </div>
                     <span className="text-sm text-muted-foreground">Senior Level</span>
                   </div>
                   <div className="flex items-center justify-between p-4 bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl hover:from-primary/10 hover:to-primary/5 transition-all duration-300 cursor-pointer">
                     <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 bg-primary rounded-full"></div>
+                      <div className="w-3 h-3 bg-[#3b82f6] rounded-full"></div>
                       <span className="font-medium">Department Heads</span>
                     </div>
                     <span className="text-sm text-muted-foreground">Mid-Senior</span>
@@ -759,10 +770,10 @@ export default function AboutPage() {
       <section className="py-20 px-4 bg-gradient-to-br from-slate-800 via-slate-700 to-blue-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:30px_30px]" />
         <div className="relative max-w-5xl mx-auto text-center">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-8 leading-tight text-white">
+          <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight text-white">
             Ready to Transform Your Leadership Team?
           </h2>
-          <p className="text-xl mb-10 text-white/90 max-w-3xl mx-auto leading-relaxed">
+          <p className="md:text-xl text-lg mb-10 text-white/90 max-w-3xl mx-auto leading-relaxed">
             Partner with Ken McCoy for scientific, competency-based leadership recruitment that delivers exceptional
             results in today's dynamic business environment.
           </p>

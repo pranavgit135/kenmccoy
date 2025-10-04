@@ -70,17 +70,17 @@ export default function ContactPage() {
                 </div>
                 <div className="bg-muted/30 rounded-xl p-6">
                   <address className="not-italic text-foreground leading-relaxed">
-                    <strong className="text-primary">Ken McCoy Leadership Advisory</strong>
+                    <strong className="text-primary">	Ken McCoy Consulting   </strong>
                     <br />
-                    Hind Saurashtra Industrial Estate
+                    B-201, Hind Saurashtra Estate
                     <br />
-                    Opposite Wellington Park, B201
+                    Opposite Wellington Park
                     <br />
                     Andheri - Kurla Road
                     <br />
-                    Mittal Industrial Estate, Marol
+                    Near Marol Metro Station
                     <br />
-                    Andheri East, Mumbai
+                    Marol, Andheri (East)
                     <br />
                     Maharashtra 400099, India
                   </address>

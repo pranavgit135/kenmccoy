@@ -54,14 +54,14 @@ export default function Header() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
-              href="/" 
+              href="https://www.linkedin.com/in/kenmccoyconsulting" 
               className="relative px-4 py-2 text-lg text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium group"
             >
               News & Media
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
-              href="/Contact" 
+              href="/contact" 
               className="relative px-4 py-2 font-medium text-lg text-gray-700 hover:text-blue-600 transition-colors duration-200  group"
             >
               Contact
@@ -123,14 +123,14 @@ export default function Header() {
                 Services
               </Link>
               <Link 
-                href="/" 
+                href="https://www.linkedin.com/in/kenmccoyconsulting" 
                 className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 News & Media
               </Link>
               <Link 
-                href="/Contact" 
+                href="/contact" 
                 className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

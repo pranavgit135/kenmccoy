@@ -37,7 +37,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Ken McCoy Leadership Advisory delivers exceptional leadership solutions worldwide, 
+              Ken McCoy Leadership Advisory delivers exceptional leadership solutions worldwide,
               connecting top-tier talent with forward-thinking organizations.
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-400">
@@ -50,36 +50,36 @@ export default function Footer() {
           <div className="space-y-6">
             <h3 className="text-xl font-semibold text-white mb-4">Quick Links</h3>
             <nav className="space-y-3">
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 className="text-gray-300 hover:text-white transition-colors duration-200 group flex items-center gap-2"
               >
                 <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 Home
               </Link>
-              <Link 
-                href="/About" 
+              <Link
+                href="/About"
                 className="text-gray-300 hover:text-white transition-colors duration-200 group flex items-center gap-2"
               >
                 <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 About Us
               </Link>
-              <Link 
-                href="/Services" 
+              <Link
+                href="/Services"
                 className="text-gray-300 hover:text-white transition-colors duration-200 group flex items-center gap-2"
               >
                 <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 Services
               </Link>
-              <Link 
-                href="/Contact" 
+              <Link
+                href="/contact"
                 className="text-gray-300 hover:text-white transition-colors duration-200 group flex items-center gap-2"
               >
                 <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 Contact
               </Link>
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 className="text-gray-300 hover:text-white transition-colors duration-200 group flex items-center gap-2"
               >
                 <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
@@ -98,33 +98,36 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    Hind Saurashtra Industrial Estate<br />
-                    Opposite Wellington Park, B201<br />
-                    Andheri - Kurla Road, Marol<br />
-                    Andheri East, Mumbai 400099<br />
-                    Maharashtra, India
+                    Ken McCoy Consulting<br/>
+                    B-201, Hind Saurashtra Estate<br/>
+                    Opposite Wellington Park<br/>
+                    Andheri-Kurla Road<br/>
+                    Near Marol Metro Station<br/>
+                    Marol, Andheri (East)<br/>
+                    Mumbai 400059. India
+
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-3 group">
                 <div className="w-8 h-8 bg-green-600/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-green-600/30 transition-colors duration-200">
                   <Phone size={16} className="text-green-400" />
                 </div>
-                <a 
-                  href="tel:+91-22-42959123" 
+                <a
+                  href="tel:+91-22-42959123"
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   +91-22-42959123
                 </a>
               </div>
-              
+
               <div className="flex items-center gap-3 group">
                 <div className="w-8 h-8 bg-purple-600/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-purple-600/30 transition-colors duration-200">
                   <Mail size={16} className="text-purple-400" />
                 </div>
-                <a 
-                  href="mailto:info@kenmccoy.in" 
+                <a
+                  href="mailto:info@kenmccoy.in"
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   info@kenmccoy.in
@@ -136,7 +139,7 @@ export default function Footer() {
           {/* Newsletter & Social */}
           <div className="space-y-6">
             <h3 className="text-xl font-semibold text-white mb-4">Stay Connected</h3>
-            
+
             {/* Newsletter Signup */}
             <div className="space-y-3">
               <p className="text-gray-300 text-sm">Subscribe to our newsletter for leadership insights</p>
@@ -168,7 +171,7 @@ export default function Footer() {
               <p className="text-gray-300 text-sm">Follow us on social media</p>
               <div className="flex gap-3">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/kenmccoyconsulting"
                   className="w-10 h-10 bg-gray-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-200 group"
                   aria-label="LinkedIn"
                 >
@@ -214,7 +217,7 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <Globe size={16} />
               <span>Serving clients globally</span>

@@ -32,7 +32,7 @@ const slides = [
     title: "Build Your Future with Us",
     description: "Whether you're scaling your team or seeking your next role, we help shape careers and strengthen companies worldwide.",
     buttons: [
-      { text: "get started", href: "/#" },
+      { text: "get started", href: "/Contact" },
       { text: "contact us", href: "/Contact" },
     ],
   },
