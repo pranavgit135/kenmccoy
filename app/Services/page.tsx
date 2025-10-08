@@ -193,8 +193,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="  text-white">
-        <img src="/experience.png" alt="" />
+      <section className=" w-full  text-white">
+        <img src="/banner.jpg" alt="" className="w-full h-80 object-cover" />
       </section>
       <Footer />
     </div>

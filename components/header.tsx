@@ -22,7 +22,7 @@ export default function Header() {
             <Link href="/" className="group">
               <div className="w-32 h-12 sm:w-36 sm:h-14 md:w-40 md:h-16 transition-transform duration-300 group-hover:scale-105">
                 <img
-                  src="./Kenmccoy-logo.png?height=64&width=160"
+                  src="./logo.jpg?height=64&width=160"
                   alt="Kenmccoy Logo"
                   className="w-full h-full object-contain"
                 />

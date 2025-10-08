@@ -348,7 +348,7 @@ export default function AboutPage() {
           <div className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative h-[300px] sm:h-[400px] lg:h-[600px] w-full overflow-hidden rounded-xl shadow-2xl bg-muted/20">
               <img 
-                src="/timeline.jpg" 
+                src="/timeline1.jpg" 
                 alt="timeline" 
                 className="w-full h-full object-contain object-center"
               />
