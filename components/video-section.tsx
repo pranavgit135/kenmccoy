@@ -45,7 +45,7 @@ export default function VideoSection() {
 },
 {
   name:"Spica",
-  logo:"/logo_Spica.jpg"
+  logo:"/spica.png"
 }]
 
   return (

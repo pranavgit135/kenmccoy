@@ -318,9 +318,9 @@ export default function AboutPage() {
             <div className="order-1 lg:order-2 relative">
               <div className="relative">
                 <img
-                  src="/placeholder.svg?height=600&width=600"
+                  src="/journey.png?height=500&width=500"
                   alt="Ken McCoy leadership team"
-                  className="rounded-2xl shadow-2xl w-full"
+                  className="rounded-2xl shadow-2xl w-full bg-gray-100"
                 />
                 <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent/10 rounded-2xl -z-10" />
                 <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/10 rounded-2xl -z-10" />

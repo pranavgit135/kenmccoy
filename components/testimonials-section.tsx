@@ -9,7 +9,7 @@ const testimonials = [
     id: 1,
     name: "Ravi Mehta",
     title: "HR Head, PetroCore Industries",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/user.png?height=300&width=300",
     quote:
       "Working with this team has been a game-changer for our recruitment process. They understand our industry inside-out and deliver with precision.",
     rating: 5,
@@ -18,7 +18,7 @@ const testimonials = [
     id: 2,
     name: "Anita Verma",
     title: "Senior Scientist, BioEdge Pharma",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/user.png?height=300&width=300",
     quote:
       "From the first interaction to final placement, the experience was smooth, professional, and transparent. I highly recommend their services.",
     rating: 5,
@@ -27,7 +27,7 @@ const testimonials = [
     id: 3,
     name: "Karan Shah",
     title: "COO, BrightPack FMCG",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/user.png?height=300&width=300",
     quote:
       "Their deep domain knowledge and access to top talent helped us fill critical roles faster than expected. Truly dependable partners.",
     rating: 5,
