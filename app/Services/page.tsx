@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Search, TrendingUp, Building, ChevronRight, Star, Award, Target } from "lucide-react"
+import { Search, TrendingUp, Building, ChevronRight, Star, Award, Target, Download } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 
@@ -79,10 +79,13 @@ export default function ServicesPage() {
 
   return (<>
     <Header/>
-    <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background md:mt-4">
+    <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background ">
+    <section className=" w-full  text-white">
+        <img src="/banner.jpg" alt="" className="w-full h-80 object-cover" />
+      </section>
         
       {/* Hero Section */}
-      <section className="md:py-36 py-10 px-4 relative overflow-hidden">
+      <section className=" py-10 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-[#3b82f6]/5 to-accent/5" />
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-16">
@@ -161,7 +164,7 @@ export default function ServicesPage() {
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-border">
-                  <button className="w-full bg-gradient-to-r from-primary to-accent text-white py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                  <button className="w-full bg-gradient-to-r from-primary to-accent text-white py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 group-hover:scale-105" onClick={() => window.location.href = '/Contact'}>
                     Learn More
                   </button>
                 </div>
@@ -186,16 +189,25 @@ export default function ServicesPage() {
             <a href="/Contact" className="bg-white text-primary px-8 py-4 rounded-full font-medium hover:bg-white/90 transition-colors duration-300">
               Schedule Consultation
             </a>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-full font-medium  hover:text-black  duration-300">
+            <button 
+              className="border-2 border-white text-white px-8 py-4 rounded-full font-medium hover:text-black duration-300 flex items-center gap-2"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/Ken McCoy Brochure_251010_141152.pdf';
+                link.download = 'Ken McCoy Consulting Brochure.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+            >
+              <Download size={18} />
               Download Brochure
             </button>
           </div>
         </div>
       </section>
 
-      <section className=" w-full  text-white">
-        <img src="/banner.jpg" alt="" className="w-full h-80 object-cover" />
-      </section>
+   
       <Footer />
     </div>
     </>

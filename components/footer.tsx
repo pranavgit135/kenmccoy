@@ -30,7 +30,7 @@ export default function Footer() {
             <div className="group">
               <div className="w-48 h-20 mb-4 transition-transform duration-300 group-hover:scale-105">
                 <img
-                  src="/Kenmccoy-logo.png?height=64&width=160"
+                  src="/footer-logo.jpg?height=64&width=160"
                   alt="Kenmccoy Logo"
                   className="w-full h-full object-contain filter  "
                 />
@@ -41,8 +41,8 @@ export default function Footer() {
               connecting top-tier talent with forward-thinking organizations.
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-400">
-              <Globe size={16} />
-              <span>Global Leadership Solutions</span>
+              
+              <span></span>
             </div>
           </div>
 
@@ -72,19 +72,20 @@ export default function Footer() {
                 Services
               </Link>
               <Link
-                href="/Contact"
-                className="text-gray-300 hover:text-white transition-colors duration-200 group flex items-center gap-2"
-              >
-                <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                Contact
-              </Link>
-              <Link
                 href="/"
                 className="text-gray-300 hover:text-white transition-colors duration-200 group flex items-center gap-2"
               >
                 <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 News & Media
               </Link>
+              <Link
+                href="/Contact"
+                className="text-gray-300 hover:text-white transition-colors duration-200 group flex items-center gap-2"
+              >
+                <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                Contact
+              </Link>
+           
             </nav>
           </div>
 
@@ -219,8 +220,7 @@ export default function Footer() {
             </div>
 
             <div className="flex items-center gap-2 text-sm text-gray-400">
-              <Globe size={16} />
-              <span>Serving clients globally</span>
+             
             </div>
           </div>
         </div>

@@ -22,7 +22,7 @@
   --radius: 0.5rem;
   --card: #ffffff;
   --card-foreground: #171717;
-  font-family: sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
 }
 
 @theme {
@@ -43,10 +43,10 @@
   --color-ring: var(--ring);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-red-hat-display);
   --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-playfair);
-  --font-source-sans: var(--font-source-sans);
+  --font-serif: var(--font-red-hat-display);
+  --font-ubuntu: var(--font-ubuntu);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -74,7 +74,12 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: sans-serif;
+  font-family: 'Red Hat Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Apply Red Hat Display to all elements */
+* {
+  font-family: 'Red Hat Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* Custom utility classes */
@@ -95,8 +100,12 @@ body {
   font-family: var(--font-serif), serif;
 }
 
-.font-source-sans {
-  font-family: var(--font-source-sans), sans-serif;
+.font-red-hat-display {
+  font-family: var(--font-red-hat-display), sans-serif;
+}
+
+.font-ubuntu {
+  font-family: var(--font-ubuntu), sans-serif;
 }
 
 /* Additional color utilities for better compatibility */

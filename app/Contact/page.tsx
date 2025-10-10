@@ -3,7 +3,7 @@
 import type React from "react"
 import Header from "@/components/header"
 import { useState } from "react"
-import { MapPin, Phone, Mail, Clock, Send, Globe, ChevronLeft, ChevronRight } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, Send, Globe, ChevronLeft, ChevronRight, CheckCircle, AlertCircle } from "lucide-react"
 import Footer from "@/components/footer"
 
 export default function ContactPage() {
@@ -15,11 +15,47 @@ export default function ContactPage() {
   })
 
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [submitMessage, setSubmitMessage] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+    setSubmitMessage('')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setSubmitMessage('Thank you! Your inquiry has been sent successfully. We\'ll get back to you within 24 hours.')
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          message: "",
+        })
+      } else {
+        setSubmitStatus('error')
+        setSubmitMessage(result.error || 'Failed to send your inquiry. Please try again.')
+      }
+    } catch (error) {
+      setSubmitStatus('error')
+      setSubmitMessage('Network error. Please check your connection and try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -140,6 +176,22 @@ export default function ContactPage() {
                 </p>
               </div>
 
+              {/* Status Message */}
+              {submitStatus !== 'idle' && (
+                <div className={`p-4 rounded-lg mb-6 flex items-start gap-3 ${
+                  submitStatus === 'success' 
+                    ? 'bg-green-50 border border-green-200 text-green-800' 
+                    : 'bg-red-50 border border-red-200 text-red-800'
+                }`}>
+                  {submitStatus === 'success' ? (
+                    <CheckCircle className="text-green-600 mt-0.5 flex-shrink-0" size={20} />
+                  ) : (
+                    <AlertCircle className="text-red-600 mt-0.5 flex-shrink-0" size={20} />
+                  )}
+                  <p className="text-sm">{submitMessage}</p>
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
@@ -207,10 +259,20 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium flex items-center justify-center gap-2 group"
+                  disabled={isSubmitting}
+                  className="w-full bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Send size={18} className="group-hover:translate-x-1 transition-transform" />
-                  Send Message
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send size={18} className="group-hover:translate-x-1 transition-transform" />
+                      Send Message
+                    </>
+                  )}
                 </button>
               </form>
             </div>

@@ -179,11 +179,32 @@ export default function AboutPage() {
             approach for selecting the best fit through scientific, psychological, skill and competency-based methods.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-lg">
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-lg" onClick={() => window.location.href = '/Services'}>
               Discover Our Approach
             </Button>
            
-            <Button size="lg" variant="outline" className="px-8 py-3 text-lg border-2 bg-transparent">
+            <Button size="lg" variant="outline" className="px-8 py-3 text-lg border-2 bg-transparent" onClick={() => {
+              setTimeout(() => {
+                const element = document.getElementById('About-video-section');
+                if (element) {
+                  element.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start',
+                    inline: 'nearest'
+                  });
+                } else {
+                  // Fallback: scroll to the section using class name
+                  const section = document.querySelector('.About-video-section');
+                  if (section) {
+                    section.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'start',
+                      inline: 'nearest'
+                    });
+                  }
+                }
+              }, 100);
+            }}>
               Watch Our Story
             </Button>
            
@@ -192,7 +213,7 @@ export default function AboutPage() {
       </section>
 
       {/* Video Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted/20">
+      <section id="About-video-section" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted/20 About-video-section">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-12 lg:mb-16">
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
@@ -247,7 +268,7 @@ export default function AboutPage() {
             </div>
 
             {/* Secondary Videos */}
-            <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow">
+            {/* <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow">
               <div className="relative aspect-video bg-muted/30 flex items-center justify-center group cursor-pointer">
                 <div className="flex flex-col items-center text-center">
                   <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-3 group-hover:bg-accent/30 transition-colors">
@@ -257,9 +278,9 @@ export default function AboutPage() {
                   <p className="text-sm text-muted-foreground px-4">Deep dive into our scientific evaluation methods</p>
                 </div>
               </div>
-            </Card>
+            </Card> */}
 
-            <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow">
+            {/* <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow">
               <div className="relative aspect-video bg-muted/30 flex items-center justify-center group cursor-pointer">
                 <div className="flex flex-col items-center text-center">
                   <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-3 group-hover:bg-accent/30 transition-colors">
@@ -269,7 +290,7 @@ export default function AboutPage() {
                   <p className="text-sm text-muted-foreground px-4">Client testimonials and placement outcomes</p>
                 </div>
               </div>
-            </Card>
+            </Card> */}
           </div>
         </div>
       </section>
@@ -309,7 +330,7 @@ export default function AboutPage() {
                     <div className="text-sm text-muted-foreground">Industries Served</div>
                   </div>
                   <div className="text-center">
-                    <CounterAnimation end={15} suffix="+" duration={1800} />
+                    <CounterAnimation end={25} suffix="+" duration={1800} />
                     <div className="text-sm text-muted-foreground">Years Experience</div>
                   </div>
                 </div>
@@ -318,7 +339,7 @@ export default function AboutPage() {
             <div className="order-1 lg:order-2 relative">
               <div className="relative">
                 <img
-                  src="/journey.png?height=500&width=500"
+                  src="/journey.jpg?height=500&width=500"
                   alt="Ken McCoy leadership team"
                   className="rounded-2xl shadow-2xl w-full bg-gray-100"
                 />
@@ -595,7 +616,7 @@ export default function AboutPage() {
             </div>
             <div className="text-center group">
               <div className="text-4xl md:text-5xl font-bold text-accent mb-2 group-hover:scale-110 transition-transform duration-300">
-                <CounterAnimation end={15} suffix="+" duration={1800} />
+                <CounterAnimation end={25} suffix="+" duration={1800} />
               </div>
               <div className="text-sm text-muted-foreground font-medium">Years Experience</div>
             </div>
@@ -626,25 +647,25 @@ export default function AboutPage() {
                   <div className="bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl px-4 py-3 text-sm font-medium hover:from-accent/10 hover:to-accent/5 transition-all duration-300 cursor-pointer">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      Technology & IT
+                  Chemicals
                     </div>
                   </div>
                   <div className="bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl px-4 py-3 text-sm font-medium hover:from-accent/10 hover:to-accent/5 transition-all duration-300 cursor-pointer">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      Financial Services
+                      Engineering and Automobiles
                     </div>
                   </div>
                   <div className="bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl px-4 py-3 text-sm font-medium hover:from-accent/10 hover:to-accent/5 transition-all duration-300 cursor-pointer">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      Manufacturing
+                      Infrastructure 
                     </div>
                   </div>
                   <div className="bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl px-4 py-3 text-sm font-medium hover:from-accent/10 hover:to-accent/5 transition-all duration-300 cursor-pointer">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      Healthcare
+                      Telecom and Electronic semiconductors
                     </div>
                   </div>
                   <div className="bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl px-4 py-3 text-sm font-medium hover:from-accent/10 hover:to-accent/5 transition-all duration-300 cursor-pointer">
@@ -740,20 +761,20 @@ export default function AboutPage() {
                   <div className="relative">
                     <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl hover:from-accent/10 hover:to-accent/5 transition-all duration-300 cursor-pointer">
                       <div className="w-3 h-3 bg-gradient-to-r from-accent to-primary rounded-full"></div>
-                      <span className="font-medium">Mumbai & Delhi</span>
+                      <span className="font-medium">India</span>
                       <div className="ml-auto text-xs text-muted-foreground">Primary Hubs</div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl hover:from-accent/10 hover:to-accent/5 transition-all duration-300 cursor-pointer">
+                  {/* <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl hover:from-accent/10 hover:to-accent/5 transition-all duration-300 cursor-pointer">
                     <div className="w-3 h-3 bg-gradient-to-r from-accent to-primary rounded-full"></div>
                     <span className="font-medium">Bangalore & Chennai</span>
                     <div className="ml-auto text-xs text-muted-foreground">Tech Centers</div>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl hover:from-accent/10 hover:to-accent/5 transition-all duration-300 cursor-pointer">
+                  </div> */}
+                  {/* <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl hover:from-accent/10 hover:to-accent/5 transition-all duration-300 cursor-pointer">
                     <div className="w-3 h-3 bg-gradient-to-r from-accent to-primary rounded-full"></div>
                     <span className="font-medium">Pune & Hyderabad</span>
                     <div className="ml-auto text-xs text-muted-foreground">Growth Markets</div>
-                  </div>
+                  </div> */}
                   {/* <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl hover:from-accent/10 hover:to-accent/5 transition-all duration-300 cursor-pointer">
                     <div className="w-3 h-3 bg-gradient-to-r from-accent to-primary rounded-full"></div>
                     <span className="font-medium">International Network</span>
@@ -780,14 +801,16 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               className="bg-white hover:bg-gray-100 text-black px-8 py-3 text-lg font-semibold shadow-lg rounded-lg transition-colors duration-300"
+              onClick={() => window.location.href = '/Contact'}
             >
-              Start Your Search Today
+                Schedule Consultation
             </button>
-            <button
-              className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-3 text-lg bg-transparent font-semibold rounded-lg transition-colors duration-300"
+            {/* <button
+              className="border-2 border-white text-white  hover:text-black px-8 py-3 text-lg bg-transparent font-semibold rounded-lg transition-colors duration-300"
+              onClick={() => window.location.href = '/Contact'}
             >
               Schedule Consultation
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
