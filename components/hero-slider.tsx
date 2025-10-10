@@ -82,7 +82,6 @@ export default function HeroSlider() {
               key={`title-${currentSlide}`}
               className="text-4xl md:text-5xl lg:text-5xl font-light mb-8 animate-fade-in-fast"
               style={{
-                fontFamily: "serif",
                 letterSpacing: "-0.02em",
               }}
             >
@@ -95,8 +94,7 @@ export default function HeroSlider() {
             {/* Description */}
             <p
               key={`desc-${currentSlide}`}
-              className="text-lg md:text-xl mb-12 max-w-2xl mx-auto opacity-90 animate-fade-in-delay-fast"
-              style={{fontFamily:"serif"}}
+              className="text-lg md:text-xl mb-12 max-w-2xl mx-auto opacity-90 animate-fade-in-delay-fast font-red-hat-display"
             >
               {currentSlideData.description}
             </p>

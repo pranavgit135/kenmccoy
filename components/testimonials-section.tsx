@@ -79,8 +79,8 @@ export default function TestimonialsSection() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center lg:text-left mb-12">
-            <p className="text-sm font-medium text-gray-600 uppercase tracking-wider font-serif mb-4">Customer Testimonials</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-4 font-serif" style={{ fontFamily: "serif" }}>
+            <p className="text-sm font-medium text-gray-600 uppercase tracking-wider font-red-hat-display mb-4">Customer Testimonials</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-4 font-red-hat-display">
             What Our Clients & Candidates Say:
             </h2>
             <div className="w-16 h-1 bg-blue-600 mx-auto lg:mx-0"></div>
@@ -115,7 +115,7 @@ export default function TestimonialsSection() {
               <div className="order-1 lg:order-2 space-y-6">
                 <div className="relative">
                   {/* Large Quote Mark */}
-                  <div className="absolute -top-4 -left-4 text-6xl text-gray-200 font-serif leading-none">"</div>
+                  <div className="absolute -top-4 -left-4 text-6xl text-gray-200 font-red-hat-display leading-none">"</div>
 
                   <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed pl-8">
                     {current.quote}

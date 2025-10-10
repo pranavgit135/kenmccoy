@@ -44,7 +44,7 @@ export default function AboutSection() {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6" style={{ fontFamily: "serif" }}>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 font-red-hat-display">
             Inspiring Growth{" "}
               <span className="relative">
                 <span className="  px-3 py-1 rounded-lg"> One Connection at a Time</span>

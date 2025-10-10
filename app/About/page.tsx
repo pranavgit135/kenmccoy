@@ -170,7 +170,7 @@ export default function AboutPage() {
             <Star className="w-4 h-4" />
             Leadership Excellence Since Inception
           </div>
-          <h1 className="font-serif text-4xl md:text-6xl xl:text-7xl font-bold text-primary mb-6 tracking-tight">Ken McCoy</h1>
+          <h1 className="font-red-hat-display text-4xl md:text-6xl xl:text-7xl font-bold text-primary mb-6 tracking-tight">Ken McCoy</h1>
           <p className="text-xl md:text-3xl text-muted-foreground mb-6 max-w-4xl mx-auto font-light">
             Leadership Advisory Organization
           </p>
@@ -216,7 +216,7 @@ export default function AboutPage() {
       <section id="About-video-section" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted/20 About-video-section">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
+            <h2 className="font-red-hat-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
               Experience Our Expertise
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl sm:max-w-3xl mx-auto px-4">
@@ -304,7 +304,7 @@ export default function AboutPage() {
                 <TrendingUp className="w-4 h-4" />
                 Our Journey
               </div>
-              <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-8 leading-tight">
+              <h2 className="font-red-hat-display text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-8 leading-tight">
                 Redefining Leadership Recruitment
               </h2>
               <div className="space-y-6">
@@ -360,7 +360,7 @@ export default function AboutPage() {
               <Star className="w-4 h-4" />
               Company Timeline
             </div>
-            <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">Our 25-Year Journey</h2>
+            <h2 className="font-red-hat-display text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">Our 25-Year Journey</h2>
             <p className="md:text-xl text-lg text-muted-foreground max-w-3xl mx-auto">
               Key milestones that shaped our growth and leadership excellence
             </p>
@@ -410,7 +410,7 @@ export default function AboutPage() {
                               <span className="text-xs font-medium text-muted-foreground">{item.year}</span>
                               <span className="w-2 h-2 rounded-full bg-accent group-hover:scale-125 transition-transform" />
                             </div>
-                            <CardTitle className="text-xl font-serif text-primary group-hover:text-accent transition-colors">
+                            <CardTitle className="text-xl font-red-hat-display text-primary group-hover:text-accent transition-colors">
                               {item.title}
                             </CardTitle>
                           </CardHeader>
@@ -467,7 +467,7 @@ export default function AboutPage() {
               <Star className="w-4 h-4" />
               Our Methodology
             </div>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">What Sets Us Apart</h2>
+            <h2 className="font-red-hat-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">What Sets Us Apart</h2>
             <p className="md:text-xl  text-lg text-muted-foreground max-w-3xl mx-auto">
               Our scientific approach combines cutting-edge assessment techniques with deep industry expertise
             </p>
@@ -494,7 +494,7 @@ export default function AboutPage() {
                             <div className="md:w-24 md:h-24 h-16 w-16 bg-gradient-to-br from-accent to-accent/80 rounded-3xl flex items-center justify-center mb-8 shadow-2xl transform hover:scale-110 transition-transform duration-300">
                               <IconComponent className="md:w-12 md:h-12 w-8 h-8 text-blue-500 " />
                             </div>
-                            <CardTitle className="text-2xl md:text-4xl font-bold font-serif text-primary md:mb-6">
+                            <CardTitle className="text-2xl md:text-4xl font-bold font-red-hat-display text-primary md:mb-6">
                               {item.title}
                             </CardTitle>
                           </div>
@@ -589,7 +589,7 @@ export default function AboutPage() {
               <Globe className="w-4 h-4" />
               Our Excellence
             </div>
-            <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">Our Reach & Impact</h2>
+            <h2 className="font-red-hat-display text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">Our Reach & Impact</h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Serving diverse industries with specialized expertise across key markets worldwide
             </p>
@@ -677,7 +677,7 @@ export default function AboutPage() {
                   <div className="bg-gradient-to-r from-muted/50 to-muted/30 rounded-xl px-4 py-3 text-sm font-medium hover:from-accent/10 hover:to-accent/5 transition-all duration-300 cursor-pointer">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      Retail & FMCG
+                      Retail, FMCG & Pharma
                     </div>
                   </div>
                 </div>
@@ -791,7 +791,7 @@ export default function AboutPage() {
       <section className="py-20 px-4 bg-gradient-to-br from-slate-800 via-slate-700 to-blue-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:30px_30px]" />
         <div className="relative max-w-5xl mx-auto text-center">
-          <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight text-white">
+          <h2 className="font-red-hat-display text-2xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight text-white">
             Ready to Transform Your Leadership Team?
           </h2>
           <p className="md:text-xl text-lg mb-10 text-white/90 max-w-3xl mx-auto leading-relaxed">

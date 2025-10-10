@@ -79,7 +79,7 @@ export default function ContactPage() {
             <Globe size={16} />
             Global Leadership Solutions
           </div>
-          <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary mb-6">Let's Connect</h1>
+          <h1 className="font-red-hat-display text-4xl md:text-6xl font-bold text-primary mb-6">Let's Connect</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Ready to transform your leadership team? Get in touch with our experts and discover how we can help you find
             exceptional leaders worldwide.
@@ -100,7 +100,7 @@ export default function ContactPage() {
                     <MapPin className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-serif text-2xl font-bold text-primary mb-2">Our Headquarters</h3>
+                    <h3 className="font-red-hat-display text-2xl font-bold text-primary mb-2">Our Headquarters</h3>
                     <p className="text-muted-foreground">Visit us at our Mumbai office</p>
                   </div>
                 </div>
@@ -170,7 +170,7 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-border/50">
               <div className="mb-8">
-                <h3 className="font-serif text-2xl font-bold text-primary mb-2">Send us a Message</h3>
+                <h3 className="font-red-hat-display text-2xl font-bold text-primary mb-2">Send us a Message</h3>
                 <p className="text-muted-foreground">
                   Tell us about your leadership needs and we'll get back to you within 24 hours.
                 </p>

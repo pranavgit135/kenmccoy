@@ -55,7 +55,7 @@ export default function VideoSection() {
           {/* Header */}
           <div className="mb-8">
             <p className="text-sm font-medium text-gray-600 uppercase tracking-wider mb-4">Experience Our Story in Motion</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-6" style={{ fontFamily: "serif" }}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-6 font-red-hat-display">
             Experience Our Story in Motion
             </h2>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">

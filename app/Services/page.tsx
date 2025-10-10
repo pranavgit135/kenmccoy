@@ -93,7 +93,7 @@ export default function ServicesPage() {
               <Star className="w-4 h-4" />
               Professional Services
             </div>
-            <h1 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-6">Our Services</h1>
+            <h1 className="font-red-hat-display text-3xl md:text-5xl font-bold text-primary mb-6">Our Services</h1>
             <p className="md:text-xl text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Comprehensive leadership solutions designed to transform organizations and accelerate career excellence
               through our proven methodologies.
@@ -130,7 +130,7 @@ export default function ServicesPage() {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-6">
               <div className="p-3 bg-[#3b82f6]/10 rounded-full text-[#3b82f6]">{services[activeService].icon}</div>
-              <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl font-bold text-[#3b82f6]">
+              <h2 className="font-red-hat-display text-2xl md:text-4xl lg:text-5xl font-bold text-[#3b82f6]">
                 {services[activeService].title}
               </h2>
             </div>
@@ -147,7 +147,7 @@ export default function ServicesPage() {
                   <div className="p-2 bg-accent/10 rounded-lg text-accent group-hover:bg-accent group-hover:text-white transition-colors duration-300">
                     <Award className="w-5 h-5" />
                   </div>
-                  <h3 className="font-serif text-xl font-bold text-primary">{item.name}</h3>
+                  <h3 className="font-red-hat-display text-xl font-bold text-primary">{item.name}</h3>
                 </div>
 
                 <p className="text-muted-foreground mb-6 leading-relaxed">{item.description}</p>
@@ -180,7 +180,7 @@ export default function ServicesPage() {
           <div className="p-4 bg-white/10 rounded-full inline-flex mb-6">
             <Target className="w-8 h-8" />
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Organization?</h2>
+          <h2 className="font-red-hat-display text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Organization?</h2>
           <p className="text-xl mb-8 text-white/90 leading-relaxed">
             Let's discuss how our proven methodologies can help you find exceptional leaders and build high-performing
             teams.

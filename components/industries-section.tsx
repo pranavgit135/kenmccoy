@@ -97,10 +97,10 @@ export default function IndustriesSection() {
             <div className="w-2 h-6 bg-gradient-to-b text-[#e67016] to-yellow-600"></div>
             <h3 className="uppercase tracking-wider text-sm font-medium">Our Expertise</h3>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6" style={{ fontFamily: "serif" }}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 font-red-hat-display">
             Industries We Served
           </h2>
-          <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto " style={{fontFamily:"sans-serif"}}>
+          <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto font-red-hat-display">
           With deep-rooted expertise across diverse sectors, we provide tailored recruitment solutions that align with your industry's demands.
            Our understanding of each industry's unique challenges helps us connect the right talent with the right opportunities
           </p>
@@ -130,7 +130,7 @@ export default function IndustriesSection() {
           {/* Left Content */}
           <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
             <div>
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-light mb-4" style={{ fontFamily: "serif" }}>
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-light mb-4 font-red-hat-display">
                 {currentData.title}
               </h3>
               <p className="text-gray-300 text-base lg:text-lg leading-relaxed">{currentData.description}</p>
@@ -143,14 +143,14 @@ export default function IndustriesSection() {
                 {currentData.industries.map((industry, index) => (
                   <li key={index} className="flex items-start">
                     <span className="text-[#e67016] mr-2 mt-1 flex-shrink-0">•</span>
-                    <span className="text-sm lg:text-base font-serif">{industry}</span>
+                    <span className="text-sm lg:text-base font-red-hat-display">{industry}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div>
-              <button className="group inline-flex font-serif items-center space-x-2 border border-white/30 hover:border-[#e67016] hover:text-[#e67016] rounded-full px-6 py-3 transition-all duration-300">
+              <button className="group inline-flex font-red-hat-display items-center space-x-2 border border-white/30 hover:border-[#e67016] hover:text-[#e67016] rounded-full px-6 py-3 transition-all duration-300">
                 <a href="/Services">Learn more</a>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>

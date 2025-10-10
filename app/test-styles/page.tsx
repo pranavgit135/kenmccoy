@@ -78,8 +78,8 @@ export default function TestStylesPage() {
         <div className="space-y-4">
           <h2 className="text-2xl font-bold text-primary">Font Tests</h2>
           <div className="space-y-2">
-            <h1 className="font-serif text-3xl text-primary">Serif Font Test</h1>
-            <p className="font-source-sans text-lg text-muted-foreground">Source Sans Font Test</p>
+            <h1 className="font-red-hat-display text-3xl text-primary">Red Hat Display Font Test</h1>
+            <p className="font-ubuntu text-lg text-muted-foreground">Ubuntu Font Test</p>
             <p className="text-foreground/80">Text with opacity test</p>
           </div>
         </div>
