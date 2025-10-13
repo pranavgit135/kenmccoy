@@ -254,14 +254,14 @@ export default function AboutPage() {
                       </div>
                     </div>
                   ) : (
-                    <video 
-                      className="w-full h-full object-contain sm:object-cover"
-                      controls
-                      autoPlay
-                      src="https://kenmccoy.in/wp-content/uploads/2021/09/ken_mccoy_11.mp4"
-                    >
-                      Your browser does not support the video tag.
-                    </video>
+                    <iframe
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/jM1MyRwvVy8?autoplay=1&mute=1&controls=1&showinfo=0&rel=0"
+                      title="Ken McCoy Consulting Video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
                   )}
                 </div>
               </Card>

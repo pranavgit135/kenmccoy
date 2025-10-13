@@ -7,18 +7,13 @@ import { Button } from "@/components/ui/button"
 export default function VideoSection() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [showThumbnail, setShowThumbnail] = useState(true)
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const videoRef = useRef<HTMLIFrameElement>(null)
 
   const handlePlayVideo = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause()
-        setIsPlaying(false)
-      } else {
-        videoRef.current.play()
-        setIsPlaying(true)
-        setShowThumbnail(false)
-      }
+    if (!isPlaying) {
+      // Start playing the video
+      setIsPlaying(true)
+      setShowThumbnail(false)
     }
   }
 
@@ -71,18 +66,17 @@ export default function VideoSection() {
           <div className="relative max-w-3xl mx-auto mb-12">
             <div className="relative aspect-video bg-black rounded-lg overflow-hidden shadow-2xl">
               {/* Background Video */}
-              <video
+              <iframe
                 ref={videoRef}
-                className="absolute inset-0 w-full h-full object-cover"
-                onEnded={handleVideoEnded}
-                muted
-                playsInline
-                
-              >
-                <source src="https://kenmccoy.in/wp-content/uploads/2021/09/ken_mccoy_11.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/jM1MyRwvVy8?controls=1&showinfo=0&rel=0"
+                title="Ken McCoy Consulting Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
 
+      
 
 
               {/* Thumbnail Overlay */}
@@ -95,8 +89,9 @@ export default function VideoSection() {
                 </div>
               )}
 
-              {/* Play Button with Glow Animation */}
-              <div className="absolute inset-0 flex items-center justify-center">
+              {/* Play Button with Glow Animation - Show when not playing */}
+              {!isPlaying && (
+                <div className="absolute inset-0 flex items-center justify-center">
                 <button
                   onClick={handlePlayVideo}
                   className="group relative"
@@ -108,14 +103,11 @@ export default function VideoSection() {
 
                   {/* Play Button */}
                   <div className="relative w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    {isPlaying ? (
-                      <Pause className="w-8 h-8 text-gray-800 ml-0" />
-                    ) : (
-                      <Play className="w-8 h-8 text-gray-800 ml-1" />
-                    )}
+                    <Play className="w-8 h-8 text-gray-800 ml-1" />
                   </div>
                 </button>
-              </div>
+                </div>
+              )}
 
               {/* Video Controls Overlay */}
               {isPlaying && (
