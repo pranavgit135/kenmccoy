@@ -113,7 +113,7 @@ export default function AboutSection() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/bg1.jpg"
+                  src="/slides/4.png"
                   alt="Team collaboration"
                   className="w-full h-80 lg:h-96 object-cover"
                 />

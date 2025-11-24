@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation"
 const slides = [
   {
     id: 1,
-    image: "./bg1.jpg",
+    image: "/slides/1.png",
     title: "Tailored Talent for Every Industry",
     description: "From Chemicals to Real Estate, our industry-specific expertise ensures you get talent that truly fits your business needs.",
     buttons: [
@@ -18,7 +18,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "./bg2.jpg",
+    image: "/slides/2.png",
     title: "Leadership That Drives Impact",
     description: "We identify high-potential professionals who don’t just fill roles — they lead, innovate, and transform organizations.",
     buttons: [
@@ -28,7 +28,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "./bg3.jpg",
+    image: "/slides/3.png",
     title: "Build Your Future with Us",
     description: "Whether you're scaling your team or seeking your next role, we help shape careers and strengthen companies worldwide.",
     buttons: [

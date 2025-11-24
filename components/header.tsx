@@ -54,7 +54,7 @@ export default function Header() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
-              href="https://www.linkedin.com/in/kenmccoyconsulting" 
+              href="https://www.linkedin.com/in/kenmccoyconsulting" target="_blank" 
               className="relative px-4 py-2 text-lg text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium group"
             >
               News & Media
@@ -123,7 +123,7 @@ export default function Header() {
                 Services
               </Link>
               <Link 
-                href="https://www.linkedin.com/in/kenmccoyconsulting" 
+                href="https://www.linkedin.com/in/kenmccoyconsulting" target="_blank" 
                 className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

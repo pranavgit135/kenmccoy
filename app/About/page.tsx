@@ -256,7 +256,7 @@ export default function AboutPage() {
                   ) : (
                     <iframe
                       className="w-full h-full"
-                      src="https://www.youtube.com/embed/jM1MyRwvVy8?autoplay=1&mute=1&controls=1&showinfo=0&rel=0"
+                      src="https://www.youtube.com/embed/sUgLThLtFjw?autoplay=1&mute=1&controls=1&showinfo=0&rel=0"
                       title="Ken McCoy Consulting Video"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

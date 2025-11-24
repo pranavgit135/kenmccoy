@@ -23,14 +23,14 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white" style={{ background: 'linear-gradient(135deg, #111827 0%, #1f2937 100%)' }}>
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-8 pt-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1 space-y-6">
             <div className="group">
               <div className="w-48 h-20 mb-4 transition-transform duration-300 group-hover:scale-105">
                 <img
-                  src="/footer-logo.jpg?height=64&width=160"
+                  src="/footer-logo.png?height=64&width=160"
                   alt="Kenmccoy Logo"
                   className="w-full h-full object-contain filter  "
                 />
@@ -72,7 +72,7 @@ export default function Footer() {
                 Services
               </Link>
               <Link
-                href="https://www.linkedin.com/in/kenmccoyconsulting" target="_blank"
+                href="https://www.linkedin.com/in/kenmccoyconsulting" target="_blank" 
                 className="text-gray-300 hover:text-white transition-colors duration-200 group flex items-center gap-2"
               >
                 <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
@@ -219,10 +219,11 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex items-center gap-2 text-sm text-gray-400">
-             
-            </div>
+        
           </div>
+        </div>
+        <div className="mt-10 mb-4">
+          <p className="text-gray-300 text-sm">Ken McCoy Consulting, Manrich HR Services and Jobtune Enterprises are part of Jobtune Group.</p>
         </div>
       </div>
 

@@ -23,25 +23,53 @@ export default function VideoSection() {
   }
 
   const partners =[{
-    name:"Bayer",
-    logo:"/logo_Bayer.png"
+    name:"L&T Heavy Engineering",
+    logo:"/clients/8.png"
   },
+{
+  name:"Bayer",
+  logo:"/logo_Bayer.png"
+},
 {
   name:"Birla Carbon",
   logo:"/logo_Birla_Carbon.jpg"
 },
 {
-  name:"Ebco",
-  logo:"/logo_Ebco.jpg"
+  name:"Tata",
+  logo:"/clients/9.png"
+},
+{
+  name:"Saint-Gobain",
+  logo:"/clients/7.png"
+},
+{
+  name:"UltraTech Cement",
+  logo:"/clients/6.png"
 },
 {
   name:"Reliance",
   logo:"/logo_reliance.png"
 },
 {
-  name:"Spica",
-  logo:"/spica.png"
-}]
+  name:"Henkel",
+  logo:"/clients/5.png"
+},
+{
+  name:"Birla Opus",
+  logo:"/clients/3.png"
+},
+{
+  name:"Rallis",
+  logo:"/clients/4.png"
+},
+{
+  name:"BASF",
+  logo:"/clients/1.png"
+},
+{
+  name:"Tata Comm.",
+  logo:"/clients/2.png"
+},]
 
   return (
     <section className="bg-gray-50 py-16 lg:py-24">
@@ -69,7 +97,7 @@ export default function VideoSection() {
               <iframe
                 ref={videoRef}
                 className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/jM1MyRwvVy8?controls=1&showinfo=0&rel=0"
+                src="https://www.youtube.com/embed/sUgLThLtFjw?autoplay=1&mute=1&controls=1&showinfo=0&rel=0"
                 title="Ken McCoy Consulting Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -83,7 +111,7 @@ export default function VideoSection() {
               {showThumbnail && (
                 <div
                   className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: "url('/images/thumbnail.jpg')" }}
+                  style={{ backgroundImage: "url('/slides/3.png')" }}
                 >
                   <div className="absolute inset-0 bg-black/20"></div>
                 </div>
@@ -110,7 +138,7 @@ export default function VideoSection() {
               )}
 
               {/* Video Controls Overlay */}
-              {isPlaying && (
+              {/* {isPlaying && (
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <div className="flex items-center justify-between text-white">
                     <button
@@ -123,25 +151,32 @@ export default function VideoSection() {
                     <div className="text-sm opacity-75">2:29</div>
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
 
           {/* Partner Logos */}
           <div className="border-t border-gray-200 pt-8">
             <p className="text-sm text-gray-500 mb-6">Trusted by leading companies</p>
-            <div className="flex flex-wrap items-center justify-center gap-8  ">
-            {partners.map((partner:any, index:number)=>(
-                 <div key={index} className="h-16 w-24 opacity-60 hover:opacity-100 rounded">
-                  <img className="w-full h-full " src={partner.logo} alt={partner.name} />
-                 </div>
-              ))}
-              {/* Logo placeholders - replace with actual logos */}
-              {/* <div className="h-8 w-20 bg-gray-300 rounded"></div>
-              <div className="h-8 w-24 bg-gray-300 rounded"></div>
-              <div className="h-8 w-16 bg-gray-300 rounded"></div>
-              <div className="h-8 w-28 bg-gray-300 rounded"></div>
-              <div className="h-8 w-12 bg-gray-300 rounded"></div> */}
+            <div className="overflow-hidden relative">
+              {/* Gradient masks for smooth fade effect */}
+              <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none"></div>
+              <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none"></div>
+              
+              <div className="flex items-center gap-8 animate-scroll">
+                {/* First set of partners */}
+                {partners.map((partner:any, index:number)=>(
+                  <div key={`first-${index}`} className="flex-shrink-0 h-18 w-26 opacity-70 hover:opacity-100 transition-opacity duration-300">
+                    <img className="w-full h-full object-contain" src={partner.logo} alt={partner.name} />
+                  </div>
+                ))}
+                {/* Duplicate set for seamless loop */}
+                {partners.map((partner:any, index:number)=>(
+                  <div key={`second-${index}`} className="flex-shrink-0 h-16 w-24 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                    <img className="w-full h-full object-contain" src={partner.logo} alt={partner.name} />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -162,6 +197,25 @@ export default function VideoSection() {
         
         .animate-glow {
           animation: glow-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(calc(-50% - 1rem));
+          }
+        }
+
+        .animate-scroll {
+          animation: scroll 40s linear infinite;
+          display: flex;
+          width: fit-content;
+        }
+
+        .animate-scroll:hover {
+          animation-play-state: paused;
         }
       `}</style>
     </section>

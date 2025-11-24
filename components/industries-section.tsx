@@ -10,12 +10,14 @@ const industriesData = {
       "Driving innovation in manufacturing processes with cutting-edge technology and sustainable practices.",
     image: "/Chem_plant_image.png?height=600&width=800",
     industries: [
-      "Talent acquisition for R&D and formulation experts",
-      "Support for regulatory and compliance hiring",
-      "Roles in production and process engineering",
+       "Executive search for plant and operations leaders",
+       "Focused search for Regulatory and Compliance roles",
+       "Global reach for niche chemical professionals",
       "Quality assurance and quality control staffing",
-      "Global reach for niche chemical professionals",
-      "Executive search for plant and operations leaders"
+      "Talent acquisition for R&D and formulation experts",
+      "Roles in production and process engineering",
+      
+     
     ],
   },
   PETROCHEMICALS: {
@@ -35,12 +37,13 @@ const industriesData = {
     title: "Fast Moving Consumer Goods (FMCG)",
     description: "Advancing healthcare through biotechnology, pharmaceuticals, and medical device innovation.",
     image: "/FMCG_store_image.png?height=600&width=800",
-    industries: ["Sales and marketing talent across regions",
+    industries: [
+      "Leadership for manufacturing and plant operations",
        "Hiring for supply chain and distribution roles",
         "Product innovation and R&D staffing",
          "Trade marketing and category management positions",
          "Procurement and vendor development specialists",
-         "Leadership for manufacturing and plant operations"
+         "Marketing and Sales talent across regions",
         ],
   },
   PHARMACEUTICALS: {
@@ -48,12 +51,12 @@ const industriesData = {
     description: "Providing comprehensive financial solutions and banking services for sustainable growth.",
     image: "/Pharma_image.png?height=600&width=800",
     industries: [
-      "Research scientists and clinical trial specialists", 
       "Regulatory affairs and documentation experts", 
-      "Formulation and analytical development roles", 
       "Manufacturing and quality compliance staffing",
+      "Research scientists and clinical trial specialists", 
+      "Formulation and analytical development roles", 
+      "Talent for new drug discovery and innovation",
       "Sales and product management professionals",
-      "Talent for new drug discovery and innovation"
     ],
   },
   CONSUMER: {
@@ -61,12 +64,12 @@ const industriesData = {
     description: "Leading the energy transition with sustainable solutions and innovative technologies.",
     image: "/Consumer.jpg?height=600&width=800",
     industries: [
-      "Sourcing and procurement experts", 
-      "Product development and innovation talent", 
-      "Sales engineers and business development roles", 
+      "Leadership for Plant and Production efficiency",
       "Skilled staff for manufacturing and assembly units",
-      "Service operations and technical support hiring",
-      "Managers for plant and production efficiency"
+      "Product development and innovation talent", 
+      "Sourcing and procurement experts", 
+      "Bussiness development and Sales roles", 
+      "After-sales service and Technical support hiring",
     ],
   },
 }
