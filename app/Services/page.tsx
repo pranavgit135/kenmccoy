@@ -193,7 +193,7 @@ export default function ServicesPage() {
               className="border-2 border-white text-white px-8 py-4 rounded-full font-medium hover:text-black duration-300 flex items-center gap-2"
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = '/Ken McCoy Brochure_251010_141152.pdf';
+                link.href = '/Ken%20McCoy%20Brochure%202025.pdf';
                 link.download = 'Ken McCoy Consulting Brochure.pdf';
                 document.body.appendChild(link);
                 link.click();

@@ -7,13 +7,13 @@ const industriesData = {
   CHEMICALS: {
     title: "Chemicals & Specialty Chemicals",
     description:
-      "Driving innovation in manufacturing processes with cutting-edge technology and sustainable practices.",
+      "Driving operational performance with High-Caliber Chemical Talents	",
     image: "/Chem_plant_image.png?height=600&width=800",
     industries: [
        "Executive search for plant and operations leaders",
        "Focused search for Regulatory and Compliance roles",
        "Global reach for niche chemical professionals",
-      "Quality assurance and quality control staffing",
+      "Quality Assurance and Quality Control staffing",
       "Talent acquisition for R&D and formulation experts",
       "Roles in production and process engineering",
       
@@ -22,7 +22,7 @@ const industriesData = {
   },
   PETROCHEMICALS: {
     title: "Petrochemicals, Oil & Gas",
-    description: "Empowering digital transformation with advanced technology solutions and innovative platforms.",
+    description: "Recruitment excellence that fuels Industry reliability and productivity	",
     image: "/Petrochem_plant_image.png?height=600&width=800",
     industries: [
       "Upstream, midstream, and downstream talent coverage",
@@ -35,7 +35,7 @@ const industriesData = {
   },
   FMCG: {
     title: "Fast Moving Consumer Goods (FMCG)",
-    description: "Advancing healthcare through biotechnology, pharmaceuticals, and medical device innovation.",
+    description: "Delivering skilled professionals to accelerate success for Brand, Sales, Supply Chain, and Innovation in a fast moving landscape",
     image: "/FMCG_store_image.png?height=600&width=800",
     industries: [
       "Leadership for manufacturing and plant operations",
@@ -48,7 +48,7 @@ const industriesData = {
   },
   PHARMACEUTICALS: {
     title: "Pharmaceuticals & Biotech",
-    description: "Providing comprehensive financial solutions and banking services for sustainable growth.",
+    description: "Enabling Quality, Compliance, and Innovation in life-changing science through precision recruitment	",
     image: "/Pharma_image.png?height=600&width=800",
     industries: [
       "Regulatory affairs and documentation experts", 
@@ -61,7 +61,7 @@ const industriesData = {
   },
   CONSUMER: {
     title: "Consumer Durables & Industrial Electronics",
-    description: "Leading the energy transition with sustainable solutions and innovative technologies.",
+    description: "Powering manufacturing excellence and product innovation through strategic talent acquisition.",
     image: "/Consumer.jpg?height=600&width=800",
     industries: [
       "Leadership for Plant and Production efficiency",

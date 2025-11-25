@@ -8,9 +8,9 @@ import { useRouter } from "next/navigation"
 const slides = [
   {
     id: 1,
-    image: "/slides/1.png",
+    image: "/slides/1.jpg",
     title: "Tailored Talent for Every Industry",
-    description: "From Chemicals to Real Estate, our industry-specific expertise ensures you get talent that truly fits your business needs.",
+    description: "From Manufacturing to Service sector, our industry-specific expertise ensures you get talent that truly fits your business needs.",
     buttons: [
       { text: "about us", href: "/About" },
       { text: "our history", href: "/About" },
@@ -18,7 +18,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "/slides/2.png",
+    image: "/slides/2.jpg",
     title: "Leadership That Drives Impact",
     description: "We identify high-potential professionals who don’t just fill roles — they lead, innovate, and transform organizations.",
     buttons: [
@@ -53,7 +53,7 @@ export default function HeroSlider() {
   const currentSlideData = slides[currentSlide]
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-[90vh] w-full overflow-hidden">
       {/* Background Images */}
       {slides.map((slide, index) => (
         <div
@@ -69,7 +69,7 @@ export default function HeroSlider() {
             }}
           />
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/20" />
         </div>
       ))}
 
