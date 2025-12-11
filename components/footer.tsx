@@ -223,7 +223,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-10 mb-4">
-          <p className="text-gray-300 text-sm">Ken McCoy, Manrich HR and Jobtune are part of Jobtune Group.</p>
+          <p className="text-gray-300 text-sm">Ken McCoy, Manrich HR and Jobtune are part of Ken McCoy Group.</p>
         </div>
       </div>
 

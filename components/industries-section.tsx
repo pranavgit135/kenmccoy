@@ -72,6 +72,32 @@ const industriesData = {
       "After-sales service and Technical support hiring",
     ],
   },
+  ENGINEERING: {
+    title: "Heavy & Light Engineering	",
+    description: "Driving Engineering growth with High-Performance Talents",
+    image: "/Consumer.jpg?height=600&width=800",
+    industries: [
+      "Sourcing highly skilled Design Engineers with updated industry and software knowledge",
+      "Engineers for Manufacturing, Operations, Quality Assurance of Machinery and Equipment",
+      "Supply Chain Professionals to support smooth business operations", 
+      "Leadership talents for Projects, Construction, Plant and Process	", 
+      "Industrial automation specialists", 
+      "Sustainability/Carbon-neutrality Experts",
+    ],
+  },
+ TELECOM_AND_SEMICONDUCTORS: {
+    title: "Telecom and Semiconductors",
+    description: "Building the workforce behind Electronics and Connectivity",
+    image: "/Consumer.jpg?height=600&width=800",
+    industries: [
+      "MW Transmission Engineers to ensure uninterrupted connectivity",
+      "Network Service Assurance Specialists",
+      "Quality Analysts for enhanced customer experience", 
+      "Fiber Network Architects to reach out to more users	", 
+      "Design Architects and Engineers for Semiconductor industry	", 
+      "Quality and Reliability Specialists",
+    ],
+  },
 }
 
 export default function IndustriesSection() {
@@ -111,18 +137,18 @@ export default function IndustriesSection() {
 
         {/* Industry Tabs - Mobile Horizontal Scroll, Desktop Grid */}
         <div className="mb-8">
-          <div className="flex overflow-x-auto lg:grid lg:grid-cols-5 gap-2 lg:gap-4 pb-2 lg:pb-0">
+          <div className="flex overflow-x-auto lg:grid lg:grid-cols-7 gap-2 lg:gap-2 pb-2 lg:pb-0">
             {Object.keys(industriesData).map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`flex-shrink-0 px-4 py-3 lg:px-6 lg:py-4 text-sm font-medium tracking-wider transition-all duration-300 rounded-lg lg:rounded-none lg:border-b-2 ${
+                className={`flex-shrink-0 px-4 py-3 lg:px-1 lg:py-3 text-sm font-medium lg:tracking-tight tracking-wider transition-all duration-300 rounded-lg lg:rounded-none lg:border-b-2 lg:text-center ${
                   activeTab === tab
                     ? "bg-yellow-500/20 text-[#e67016] lg:bg-transparent lg:border-[#e67016]"
                     : "text-gray-400 hover:text-white hover:bg-white/5 lg:hover:bg-transparent lg:border-transparent lg:hover:border-gray-600"
                 }`}
               >
-                {tab}
+                <span className="lg:break-words">{tab.replace(/_/g, ' ')}</span>
               </button>
             ))}
           </div>

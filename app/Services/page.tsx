@@ -32,24 +32,24 @@ export default function ServicesPage() {
       ],
     },
     {
-      title: "Career Excellence – Workshops",
+      title: 		"Assessment Center-based Search (HITAC)	",
       icon: <TrendingUp className="w-8 h-8" />,
       description: "Professional development workshops designed to enhance individual and team performance",
       items: [
         {
-          name: "Enhancing Individual Productivity",
-          description: "Personalized strategies to maximize professional effectiveness and career growth",
-          features: ["Time management mastery", "Goal setting frameworks", "Performance optimization"],
+          name: "Reduced Turnover",
+          description: "Indentifies talents who are culture-fit for the organization",
+          features: ["Prioritizing Culture & Role fit", "Using Structured Assessment and realistic Job Preview	", "Identifying talents with Growth potential"],
         },
         {
-          name: "Building Harmonious Interpersonal Relationships",
-          description: "Develop essential soft skills for effective workplace collaboration",
-          features: ["Communication excellence", "Conflict resolution", "Team dynamics"],
+          name: "Enhanced Performance	",
+          description: "Ensuring High Potential talents who takes less gestation period and deliver performance",
+          features: ["Identifying talents with learning agility", "Evaluation of Leadership Traits", "Assessing Ownership, Drive and Proactive behaviour"],
         },
         {
-          name: "Creating Joyful Work Place",
-          description: "Foster positive work environments that drive engagement and retention",
-          features: ["Culture transformation", "Employee engagement", "Wellness programs"],
+          name: "Organizational Growth",
+          description: "Finding Talents who are aligned with strategic goal of the organization",
+          features: ["Evaluating business acument and strategic thinking", "Testing ability to Prioratize and execute with Clarity", "Assessing talent's Change readiness"],
         },
       ],
     },
@@ -193,7 +193,7 @@ export default function ServicesPage() {
               className="border-2 border-white text-white px-8 py-4 rounded-full font-medium hover:text-black duration-300 flex items-center gap-2"
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = '/Ken%20McCoy%20Brochure%202025.pdf';
+                link.href = '/Ken%20McCoy%20Brochure%202026.pdf';
                 link.download = 'Ken McCoy Consulting Brochure.pdf';
                 document.body.appendChild(link);
                 link.click();
