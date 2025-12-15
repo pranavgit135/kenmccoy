@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button"
 const testimonials = [
   {
     id: 1,
-    name: "Ravi Mehta",
-    title: "HR Head, PetroCore Industries",
+    name: "R Mehta",
+    title: "Head HR, a leading petrochem organization",
     image: "/user.png?height=300&width=300",
     quote:
       "Working with this team has been a game-changer for our recruitment process. They understand our industry inside-out and deliver with precision.",
@@ -16,8 +16,8 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Anita Verma",
-    title: "Senior Scientist, BioEdge Pharma",
+    name: "Anita",
+    title: "R&D Scientist, Pharmaceuticals",
     image: "/user.png?height=300&width=300",
     quote:
       "From the first interaction to final placement, the experience was smooth, professional, and transparent. I highly recommend their services.",
@@ -25,8 +25,8 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Karan Shah",
-    title: "COO, BrightPack FMCG",
+    name: "K Shah",
+    title: "COO, Leading FMCG company",
     image: "/user.png?height=300&width=300",
     quote:
       "Their deep domain knowledge and access to top talent helped us fill critical roles faster than expected. Truly dependable partners.",

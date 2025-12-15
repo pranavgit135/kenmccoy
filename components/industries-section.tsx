@@ -75,7 +75,7 @@ const industriesData = {
   ENGINEERING: {
     title: "Heavy & Light Engineering	",
     description: "Driving Engineering growth with High-Performance Talents",
-    image: "/Consumer.jpg?height=600&width=800",
+    image: "/engineering.jpg?height=600&width=800",
     industries: [
       "Sourcing highly skilled Design Engineers with updated industry and software knowledge",
       "Engineers for Manufacturing, Operations, Quality Assurance of Machinery and Equipment",
@@ -88,7 +88,7 @@ const industriesData = {
  TELECOM_AND_SEMICONDUCTORS: {
     title: "Telecom and Semiconductors",
     description: "Building the workforce behind Electronics and Connectivity",
-    image: "/Consumer.jpg?height=600&width=800",
+    image: "/telecom.jpg?height=600&width=800",
     industries: [
       "MW Transmission Engineers to ensure uninterrupted connectivity",
       "Network Service Assurance Specialists",

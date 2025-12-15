@@ -232,15 +232,15 @@ export default function Footer() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-gray-400 text-sm">
-              © {currentYear} Ken McCoy Leadership Advisory developed by <a href="https://www.geosoftech.com" className="text-gray-400 hover:text-white transition-colors duration-200">GEO Softech</a>. All rights reserved.
+              © {currentYear} Ken McCoy Consulting developed by <a href="https://www.geosoftech.com" className="text-gray-400 hover:text-white transition-colors duration-200">GEO Softech</a>. All rights reserved.
             </div>
             <div className="flex items-center gap-6 text-sm">
               <Link href="/#" className="text-gray-400 hover:text-white transition-colors duration-200">
                 Privacy Policy
               </Link>
-              <Link href="/#" className="text-gray-400 hover:text-white transition-colors duration-200">
+              {/* <Link href="/#" className="text-gray-400 hover:text-white transition-colors duration-200">
                 Terms of Service
-              </Link>
+              </Link> */}
               <Link href="/#" className="text-gray-400 hover:text-white transition-colors duration-200">
                 Cookie Policy
               </Link>
