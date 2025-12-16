@@ -223,7 +223,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-10 mb-4">
-          <p className="text-gray-300 text-sm">Ken McCoy, Manrich HR and Jobtune are part of Ken McCoy Group.</p>
+          <p className="text-gray-300 text-sm">Ken McCoy, Legal and Ownership Note - The Group Structure:
+          The Ken McCoy Consulting umbrella includes - Jobtune, a brand used for online assessment and development; Manrich HR Services, a proprietary concern providing HR consulting services.</p>
         </div>
       </div>
 
@@ -232,7 +233,7 @@ export default function Footer() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-gray-400 text-sm">
-              © {currentYear} Ken McCoy Consulting developed by <a href="https://www.geosoftech.com" className="text-gray-400 hover:text-white transition-colors duration-200">GEO Softech</a>. All rights reserved.
+              © {currentYear} Ken McCoy Consulting. All rights reserved.Developed by <a href="https://www.geosoftech.com" className="text-gray-400 hover:text-white transition-colors duration-200">GEO Softech</a>
             </div>
             <div className="flex items-center gap-6 text-sm">
               <Link href="/#" className="text-gray-400 hover:text-white transition-colors duration-200">
