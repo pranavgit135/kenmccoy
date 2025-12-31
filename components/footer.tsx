@@ -223,7 +223,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-10 mb-4">
-          <p className="text-gray-300 text-sm">Ken McCoy, Legal and Ownership Note - The Group Structure:
+          <p className="text-gray-300 text-sm">Legal and Ownership Note - The Group Structure: <br />
           The Ken McCoy Consulting umbrella includes - Jobtune, a brand used for online assessment and development; Manrich HR Services, a proprietary concern providing HR consulting services.</p>
         </div>
       </div>
