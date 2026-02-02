@@ -17,7 +17,7 @@ import {
 import Link from 'next/link'
 
 // For client-side components, use NEXT_PUBLIC_ prefix
-const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL || 'khandekarpranav52@gmail.com'
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'khandekarpranav52@gmail.com'
 
 export default function AdminLoginPage() {
   const router = useRouter()
