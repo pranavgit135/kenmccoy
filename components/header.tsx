@@ -22,7 +22,7 @@ export default function Header() {
             <Link href="/" className="group">
               <div className="w-32 h-12 sm:w-36 sm:h-14 md:w-40 md:h-16 transition-transform duration-300 group-hover:scale-105">
                 <img
-                  src="./logo.jpg?height=64&width=160"
+                  src="/logo.jpg?height=64&width=160"
                   alt="Kenmccoy Logo"
                   className="w-full h-full object-contain"
                 />
@@ -58,6 +58,13 @@ export default function Header() {
               className="relative px-4 py-2 text-lg text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium group"
             >
               News & Media
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+            <Link 
+              href="/blog" 
+              className="relative px-4 py-2 font-medium text-lg text-gray-700 hover:text-blue-600 transition-colors duration-200  group"
+            >
+              Blog
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 

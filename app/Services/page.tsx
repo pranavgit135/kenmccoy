@@ -80,8 +80,15 @@ export default function ServicesPage() {
   return (<>
     <Header/>
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background ">
-    <section className=" w-full  text-white">
-        <img src="/banner.jpg" alt="" className="w-full h-80 object-cover" />
+    <section className="w-full text-white relative overflow-hidden">
+        <div className="relative w-full h-48 sm:h-64 md:h-80 bg-muted">
+          <img 
+            src="/banner.jpg" 
+            alt="Services Banner" 
+            className="w-full h-full object-contain sm:object-contain md:object-cover" 
+            style={{ objectPosition: 'center center' }}
+          />
+        </div>
       </section>
         
       {/* Hero Section */}
@@ -180,7 +187,7 @@ export default function ServicesPage() {
           <div className="p-4 bg-white/10 rounded-full inline-flex mb-6">
             <Target className="w-8 h-8" />
           </div>
-          <h2 className="font-red-hat-display text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Organization?</h2>
+          <h2 className="font-red-hat-display text-3xl md:text-5xl font-bold mb-6">Ready to Transform Your Organization?</h2>
           <p className="text-xl mb-8 text-white/90 leading-relaxed">
             Let's discuss how our proven methodologies can help you find exceptional leaders and build high-performing
             teams.

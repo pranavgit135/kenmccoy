@@ -163,7 +163,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-background">
       <Header />
       {/* Hero Section */}
-      <section className="relative  bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 py-36 px-4 overflow-hidden">
+      <section className="relative  bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 lg:py-36 py-16 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
         <div className="relative max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6">
