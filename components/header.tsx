@@ -20,7 +20,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="group">
-              <div className="w-32 h-12 sm:w-36 sm:h-14 md:w-40 md:h-16 transition-transform duration-300 group-hover:scale-105">
+              <div className="w-32 h-12 sm:w-36 sm:h-14 md:w-40 md:h-16 ">
                 <img
                   src="/logo.jpg?height=64&width=160"
                   alt="Kenmccoy Logo"

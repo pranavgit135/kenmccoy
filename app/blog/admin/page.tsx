@@ -19,7 +19,8 @@ import {
   Search,
   Settings,
   ArrowLeft,
-  LogOut
+  LogOut,
+  MessageCircle
 } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 
@@ -177,6 +178,7 @@ export default function BlogAdminPage() {
       router.push('/blog/admin/login')
     }
   }
+
 
   if (checkingAuth) {
     return (
@@ -421,8 +423,8 @@ export default function BlogAdminPage() {
                             size="sm"
                             onClick={() => handleToggleStatus(blog._id)}
                             className={blog.status === 'published'
-                              ? 'bg-yellow-500/10 border-yellow-400/30 text-yellow-700 dark:text-yellow-300 hover:bg-yellow-500/20'
-                              : 'bg-green-500/10 border-green-400/30 text-green-700 dark:text-green-300 hover:bg-green-500/20'
+                              ? 'bg-yellow-500/10 border-yellow-400/30 !text-yellow-700 dark:text-yellow-300 hover:bg-yellow-500/20'
+                              : 'bg-green-500/10 border-green-400/30 !text-green-700 dark:text-green-300 hover:bg-green-500/20'
                             }
                           >
                             {blog.status === 'published' ? (
@@ -441,11 +443,21 @@ export default function BlogAdminPage() {
                             variant="outline"
                             size="sm"
                             onClick={() => handleDelete(blog._id)}
-                            className="bg-destructive/10 border-destructive/30 text-destructive hover:bg-destructive/20"
+                            className="bg-destructive/10 border-destructive/30 !text-destructive hover:bg-destructive/20"
                           >
                             <Trash2 className="w-4 h-4 mr-2" />
                             Delete
                           </Button>
+                          <Link href={`/blog/admin/comments/${blog._id}`}>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              className="bg-blue-500/10 border-blue-400/30 !text-blue-700 dark:text-blue-300 hover:bg-blue-500/20"
+                            >
+                              <MessageCircle className="w-4 h-4 mr-2" />
+                              Comments
+                            </Button>
+                          </Link>
                           <Link href={`/blog/${blog.slug}`}>
                             <Button
                               variant="ghost"

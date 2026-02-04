@@ -6,6 +6,8 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
 import Header from '@/components/header'
 import { 
   ArrowLeft, 
@@ -16,8 +18,11 @@ import {
   Share2,
   Heart,
   MessageCircle,
-  BookOpen
+  BookOpen,
+  Send,
+  Mail
 } from 'lucide-react'
+import { Textarea } from '@/components/ui/textarea'
 
 interface BlogPost {
   _id?: string
@@ -36,12 +41,30 @@ interface BlogPost {
   comments?: number
 }
 
+interface Comment {
+  _id: string
+  name: string
+  email: string
+  message: string
+  status: 'pending' | 'approved' | 'rejected'
+  createdAt: string
+}
+
 export default function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const [post, setPost] = useState<BlogPost | null>(null)
   const [loading, setLoading] = useState(true)
   const [relatedPosts, setRelatedPosts] = useState<BlogPost[]>([])
   const [liked, setLiked] = useState(false)
   const [slug, setSlug] = useState<string>('')
+  const [comments, setComments] = useState<Comment[]>([])
+  const [commentsLoading, setCommentsLoading] = useState(false)
+  const [commentForm, setCommentForm] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
+  const [submitting, setSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null)
 
   useEffect(() => {
     // Await params first
@@ -77,6 +100,9 @@ export default function BlogDetailPage({ params }: { params: Promise<{ slug: str
           
           // Fetch related posts (published posts excluding current one)
           fetchRelatedPosts(blogData._id)
+          
+          // Fetch comments for this blog
+          fetchComments(blogData._id)
         } else {
           setPost(null)
         }
@@ -113,6 +139,68 @@ export default function BlogDetailPage({ params }: { params: Promise<{ slug: str
     } catch (error) {
       console.error('Error loading related posts:', error)
       setRelatedPosts([])
+    }
+  }
+
+  const fetchComments = async (blogId: string) => {
+    setCommentsLoading(true)
+    try {
+      const response = await fetch(`/api/comments?blogId=${blogId}`)
+      const result = await response.json()
+
+      if (result.success && result.data) {
+        setComments(result.data)
+      }
+    } catch (error) {
+      console.error('Error loading comments:', error)
+      setComments([])
+    } finally {
+      setCommentsLoading(false)
+    }
+  }
+
+  const handleSubmitComment = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setSubmitting(true)
+    setSubmitMessage(null)
+
+    if (!post?._id) {
+      setSubmitMessage({ type: 'error', text: 'Blog post not found' })
+      setSubmitting(false)
+      return
+    }
+
+    try {
+      const response = await fetch('/api/comments', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          blogId: post._id,
+          name: commentForm.name.trim(),
+          email: commentForm.email.trim(),
+          message: commentForm.message.trim(),
+        }),
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setSubmitMessage({ type: 'success', text: result.message || 'Comment submitted successfully! It will be visible after admin approval.' })
+        setCommentForm({ name: '', email: '', message: '' })
+        // Refresh comments to show the new one (if admin approved it immediately, though unlikely)
+        if (post._id) {
+          fetchComments(post._id)
+        }
+      } else {
+        setSubmitMessage({ type: 'error', text: result.error || 'Failed to submit comment' })
+      }
+    } catch (error) {
+      console.error('Error submitting comment:', error)
+      setSubmitMessage({ type: 'error', text: 'Failed to submit comment. Please try again.' })
+    } finally {
+      setSubmitting(false)
     }
   }
 
@@ -271,7 +359,7 @@ export default function BlogDetailPage({ params }: { params: Promise<{ slug: str
                 
                 <div className="flex items-center gap-2">
                   <MessageCircle className="w-4 h-4" />
-                  <span>{post.comments} comments</span>
+                  <span>{comments.length} {comments.length === 1 ? 'comment' : 'comments'}</span>
                 </div>
               </div>
 
@@ -486,6 +574,145 @@ export default function BlogDetailPage({ params }: { params: Promise<{ slug: str
               </div>
             </CardContent>
           </Card>
+        </motion.div>
+
+        {/* Comments Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mt-12"
+        >
+          <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
+            <MessageCircle className="w-6 h-6" />
+            Comments ({comments.length})
+          </h2>
+
+          {/* Comment Form */}
+          <Card className="bg-card border-border shadow-lg mb-8">
+            <CardContent className="p-6">
+              <form onSubmit={handleSubmitComment} className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="comment-name" className="text-foreground flex items-center gap-2">
+                      <User className="w-4 h-4" />
+                      Name
+                    </Label>
+                    <Input
+                      id="comment-name"
+                      type="text"
+                      value={commentForm.name}
+                      onChange={(e) => setCommentForm({ ...commentForm, name: e.target.value })}
+                      placeholder="Your name"
+                      required
+                      className="bg-muted border-border text-foreground placeholder:text-muted-foreground focus:border-accent focus:ring-accent/20 rounded-xl"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="comment-email" className="text-foreground flex items-center gap-2">
+                      <Mail className="w-4 h-4" />
+                      Email
+                    </Label>
+                    <Input
+                      id="comment-email"
+                      type="email"
+                      value={commentForm.email}
+                      onChange={(e) => setCommentForm({ ...commentForm, email: e.target.value })}
+                      placeholder="your.email@example.com"
+                      required
+                      className="bg-muted border-border text-foreground placeholder:text-muted-foreground focus:border-accent focus:ring-accent/20 rounded-xl"
+                    />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="comment-message" className="text-foreground">
+                    Your Comment
+                  </Label>
+                  <Textarea
+                    id="comment-message"
+                    value={commentForm.message}
+                    onChange={(e) => setCommentForm({ ...commentForm, message: e.target.value })}
+                    placeholder="Share your thoughts..."
+                    required
+                    rows={5}
+                    className="bg-muted border-border text-foreground placeholder:text-muted-foreground focus:border-accent focus:ring-accent/20 rounded-xl resize-none"
+                  />
+                </div>
+                {submitMessage && (
+                  <div className={`px-4 py-3 rounded-xl text-sm ${
+                    submitMessage.type === 'success'
+                      ? 'bg-green-500/10 border border-green-500/30 text-green-700 dark:text-green-300'
+                      : 'bg-destructive/10 border border-destructive/30 text-destructive'
+                  }`}>
+                    {submitMessage.text}
+                  </div>
+                )}
+                <Button
+                  type="submit"
+                  disabled={submitting || !commentForm.name || !commentForm.email || !commentForm.message}
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  {submitting ? (
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 border-2 border-accent-foreground/30 border-t-accent-foreground rounded-full animate-spin" />
+                      Submitting...
+                    </div>
+                  ) : (
+                    <div className="flex items-center gap-2">
+                      <Send className="w-4 h-4" />
+                      Post Comment
+                    </div>
+                  )}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+
+          {/* Comments List */}
+          {commentsLoading ? (
+            <div className="text-center py-8">
+              <div className="w-8 h-8 border-2 border-muted border-t-accent rounded-full animate-spin mx-auto mb-2" />
+              <p className="text-muted-foreground">Loading comments...</p>
+            </div>
+          ) : comments.length === 0 ? (
+            <Card className="bg-card border-border">
+              <CardContent className="p-8 text-center">
+                <MessageCircle className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+                <p className="text-muted-foreground">No comments yet. Be the first to comment!</p>
+              </CardContent>
+            </Card>
+          ) : (
+            <div className="space-y-4">
+              {comments.map((comment) => (
+                <Card key={comment._id} className="bg-card border-border hover:border-accent/50 transition-colors">
+                  <CardContent className="p-6">
+                    <div className="flex items-start justify-between mb-3">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-[#F57433] rounded-full flex items-center justify-center text-accent-foreground font-semibold">
+                          {comment.name.charAt(0).toUpperCase()}
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-card-foreground">{comment.name}</h4>
+                          <p className="text-xs text-muted-foreground">{comment.email}</p>
+                        </div>
+                      </div>
+                      <div className="text-xs text-muted-foreground flex items-center gap-1">
+                        <Calendar className="w-3 h-3" />
+                        {new Date(comment.createdAt).toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'short',
+                          day: 'numeric',
+                          hour: '2-digit',
+                          minute: '2-digit'
+                        })}
+                      </div>
+                    </div>
+                    <p className="text-foreground leading-relaxed whitespace-pre-wrap">{comment.message}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          )}
         </motion.div>
 
         {/* Related Posts */}

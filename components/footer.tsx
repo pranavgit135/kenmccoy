@@ -21,14 +21,14 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 text-white" style={{ background: 'linear-gradient(135deg, #111827 0%, #1f2937 100%)' }}>
+    <footer className="bg-[#181F2F] text-white" >
       {/* Main Footer Content */}
       <div className="container mx-auto px-8 pt-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1 space-y-6">
             <div className="group">
-              <div className="w-48 h-20 mb-4 transition-transform duration-300 group-hover:scale-105">
+              <div className="w-48 h-20 mb-4">
                 <img
                   src="/footer-logo.png?height=64&width=160"
                   alt="Kenmccoy Logo"
@@ -78,6 +78,14 @@ export default function Footer() {
                 <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 News & Media
               </Link>
+              <Link
+                href="/blog"
+                className="text-gray-300 hover:text-white transition-colors duration-200 group flex items-center gap-2"
+              >
+                <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                Blog
+              </Link>
+           
               <Link
                 href="/Contact"
                 className="text-gray-300 hover:text-white transition-colors duration-200 group flex items-center gap-2"
@@ -233,7 +241,7 @@ export default function Footer() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-gray-400 text-sm">
-              © {currentYear} Ken McCoy Consulting. All rights reserved.Developed by <a href="https://www.geosoftech.com" className="text-gray-400 hover:text-white transition-colors duration-200">GEO Softech</a>
+              © {currentYear} Ken McCoy Consulting. All rights reserved.
             </div>
             <div className="flex items-center gap-6 text-sm">
               <Link href="/#" className="text-gray-400 hover:text-white transition-colors duration-200">
